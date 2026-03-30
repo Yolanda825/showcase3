@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>各端场景/主体占比报告</title>
+<title>各端抠图用户画像分析</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" onerror="this.onerror=null;this.src='https://cdn.bootcdn.net/ajax/libs/echarts/5.5.1/echarts.min.js'"></script>
 <style>
 /* McKinsey Consulting 风格 — 深蓝结构化说服力，内容不改 */
@@ -104,75 +104,111 @@ details summary:hover{color:#1a3560}
 <div class="hero-top-line"></div>
 
 <nav id="toc" class="toc collapsed">
-  <div class="toc-head"><span>渠道目录</span><button class="toc-close" onclick="tocToggle(false)">✕</button></div>
-  <a href="#sec-advice">业务建议</a>
-  <a href="#sec-compare">各端对比</a>
-  <a href="#ch-neiqian">内嵌设计室</a>
-  <a href="#ch-pc">秀秀PC</a>
-  <a href="#ch-app">设计室APP</a>
-  <a href="#sec-appendix-l2">附录·二级主体TOP40</a>
+  <div class="toc-head"><span>报告目录</span><button class="toc-close" onclick="tocToggle(false)">✕</button></div>
+  <a href="#sec-advice">一、业务建议</a>
+  <a href="#sec-portrait-overview">二、用户需求画像分析</a>
+  <a href="#sec-portrait-summary">I、各端用户画像总览</a>
+  <a href="#sec-portrait-ecomm">II、电商场景各端用户画像</a>
+  <a href="#sec-portrait-creative">III、设计/创意场景各端用户画像</a>
+  <a href="#sec-appendix">附录</a>
+  <a href="#sec-appendix-scenes">一、场景明细</a>
+  <a href="#ch-neiqian">I、内嵌设计室</a>
+  <a href="#ch-pc">II、秀秀PC</a>
+  <a href="#ch-app">III、设计室APP</a>
+  <a href="#sec-appendix-l2shares">二、各端二级主体占比</a>
+  <a href="#sec-appendix-labels">三、标签体系</a>
 </nav>
 <button class="toc-open" onclick="tocToggle(true)">☰ 目录</button>
 
 <div class="hero">
-  <h1>内嵌渠道 scene_l2 与主体占比报告</h1>
+  <h1>各端抠图用户画像分析</h1>
+  <p class="sub">围绕各端高频抠图需求，归纳用户画像、重点场景差异。</p>
  
 </div>
 <div class="container">
 
 <div class="section card" id="sec-advice" style="scroll-margin-top:20px;margin-bottom:32px">
-  <h2 style="margin-top:0">业务建议</h2>
-  
-  <div style='display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.9'><div><div style='font-weight:700;color:var(--text);margin-bottom:6px'>产品侧</div><div style='margin-top:4px;padding-left:1.2em;color:var(--sub)'><strong>移动端重点做快编辑</strong>：围绕「商品详情页」「社交配图」等高频内容化需求，重点承接快速换背景、调尺寸等轻量编辑，缩短出图路径。</div><div style='margin-top:4px;padding-left:1.2em;color:var(--sub)'><strong>PC / Web 重点做标准化生产和精细化编辑</strong>：围绕白底图和标准商品素材处理，重点强化高精度复杂边缘处理、换背景和批量出图能力。</div><div style='margin-top:4px;padding-left:1.2em;color:var(--sub)'><strong>APP头部场景优先突破</strong>：设计室 APP 头部场景最集中，优先围绕「商品详情页」「社交配图」「电商主图」优化</div></div><div><div style='font-weight:700;color:var(--text);margin-bottom:6px'>推广侧</div><div style='padding-left:1.2em;color:var(--sub)'><strong>移动端更适配 C 端场景推广</strong>：可从「社交配图」这类C端场景寻找推广机会。</div><div style='margin-top:4px;padding-left:1.2em;color:var(--sub)'><strong>桌面端更适配 B 端场景推广</strong>：突出白底图、文档配图等更标准化、更偏生产流程的处理需求。</div></div><div><div style='font-weight:700;color:var(--text);margin-bottom:6px'>除商品图外其他机会场景</div><div style='padding-left:1.2em;color:var(--sub)'><strong>各端共性需求</strong>：社交配图、Logo/图标提取、海报设计在各端都有较大需求。</div><div style='margin-top:4px;padding-left:1.2em;color:var(--sub)'><strong>其他分端场景</strong>：APP 端可尝试推广直播带货素材，内嵌/PC / Web 可关注文档配图场景。</div></div></div>
-  
-</div>
-
-
-<div class="section card" id="sec-compare" style="scroll-margin-top:20px;margin-bottom:32px">
-  <h2 style="margin-top:0">各端对比</h2>
-  
-<div class="exec-item" style="margin-bottom:16px">
-  <div class="item-ttl">各端占比结论</div>
-  <ul style="margin:8px 0 0;padding-left:1.25em;line-height:1.75;font-size:14px;color:var(--sub)">
-    <li style='margin:6px 0'>移动端（内嵌、APP）「商品详情页」占比 <strong>29.7%</strong>，高于桌面端（web/PC） <strong>16.5%</strong>；「白底/去底」场景移动端占比仅 <strong>6.4%</strong>，低于桌面端 <strong>12.1%</strong>，说明移动端更偏轻运营/内容化商品展示，PC/Web 更偏标准商品/去底素材，换背景需求</li><li style='margin:6px 0'>从场景需求排序看，移动端的「社交配图」场景，尤其是内嵌设计室，需求排名高于桌面端，说明移动端更适合承接社交传播和内容运营类出图场景。</li><li style='margin:6px 0'>设计室 APP 前三类场景合计 <strong>66.6%</strong>、偏度 <strong>5.13</strong>，四端里头部最集中</li><li style='margin:6px 0'>从 TOP3 二级主体看，移动端更偏人像、服饰和展示型主体，桌面端更偏文档、字体、Logo 和工业件等标准化主体</li><li style='margin:6px 0'>各端商品图主体存在差异，<strong>商品图PC秀秀和web白底图场景 </strong> 偏工业/零件/工具；<strong>而内嵌 / APP 和Web端主图详情图</strong> 常见服饰/上装/人像</li>
+  <h2 style="margin-top:0">一、业务建议</h2>
+  <style>
+  #sec-advice .advice-key { color:#b45309; font-weight:700; }
+  </style>
+  <h3 style="margin-top:16px">I、各端画像总结</h3>
+  <ul style="margin:0;padding-left:1.2em;font-size:14px;line-height:1.8;list-style:disc">
+    <li style='margin:6px 0;color:var(--sub)'><strong>内嵌设计室</strong>：主要为3类用户：C端生活人像+B端电商+平面设计用户，电商需求占比较各端最低，其中模特服饰需求更大；设计场景中图像设计和品牌logo用户更突出</li><li style='margin:6px 0;color:var(--sub)'><strong>秀秀PC</strong>：重电商、轻设计办公的桌面端用户，电商用户偏工业零件、配件配饰处理较专业型商家，商品图白底图和镂空结构较其他端更多；设计场景偏文字处理（logo+字效）</li><li style='margin:6px 0;color:var(--sub)'><strong>设计室APP</strong>：电商需求主导，社交平台服饰电商用户，如抖音电商/小红书电商/微商，商品图多为模特图（含童装）、服饰图</li><li style='margin:6px 0;color:var(--sub)'><strong>Web</strong>：主静物商品辅设计的桌面端用户，用户较移动端专业。生活用品、家居家具商品图较其他端更突出，白底图占比较高；设计/创意场景各端中占比最高，多为平面拼贴和logo提取场景，素材类型较杂</li>
+  </ul>
+  <h3 style="margin-top:16px">II、业务建议</h3>
+  <ul style="margin:0;padding-left:0;font-size:14px;line-height:1.9;list-style:none;">
+    <li style='margin:0 0 16px;color:var(--sub)'><div style='font-weight:700;color:var(--text);margin-bottom:4px'>1、后链路新增“加文字元素”能力</div><div style='margin:0'> <span class='advice-key'>商品详情页</span>在各端占比都在top2，目前虽已支持换背景改尺寸等后链路适配但是缺乏加文字元素能力，建议可以增加加文字元素的能力如模特图抠完直接加 <span class='advice-key'>卖点贴片</span>、<span class='advice-key'>价格角标</span>，更适配<span class='advice-key'>移动端快速社媒推广出图</span>，加文字素材同时也适配内嵌top1的社交配图C端玩法场景。</div></li><li style='margin:0 0 16px;color:var(--sub)'><div style='font-weight:700;color:var(--text);margin-bottom:4px'>2、新增多元素重组的能力，并串联海报设计</div><div style='margin:0'>除了APP端设计/创意场景为第二大场景，其中 <span class='advice-key'>海报设计</span>或<span class='advice-key'>平面拼贴/合成</span> 需求较大，这类需求各端多主体占比均较高，往往需要多元素抠图重组。 当前支持单图多元素抠图但是不支持重组，可增加多元素拼贴能力或者在批量抠图后串联海报设计（当前仅支持图片编辑），更适配 <span class='advice-key'>设计/创意场景的后链路需求</span> </div></li><li style='margin:0 0 16px;color:var(--sub)'><div style='font-weight:700;color:var(--text);margin-bottom:4px'>3、效果优化优先级：上装优先，其次工业零件和web端家具方向</div><div style='margin:0'><span class='advice-key'>上装</span> 在web分析中保存率较低，且从需求画像来看在移动端上装占比较高，应优先投入； 工业零件在PC端需求较大，Web 端分析结论里 <span class='advice-key'>工业零件在白底图场景保存率 76.5%</span>、但整体仅 <span class='advice-key'>68.1%</span>，仍有提升空间，PC 端镂空较多，后续需要再看下PC端工业零件的保存率。</div></li><li style='margin:0 0 16px;color:var(--sub)'><div style='font-weight:700;color:var(--text);margin-bottom:4px'>4、运营推广方向按端区分</div><div style='margin:0'>移动端更偏 <span class='advice-key'>抖音电商/小红书电商/微商</span> 的 <span class='advice-key'>服饰（包括童装）、模特图</span>。<br/>Web 更偏 <span class='advice-key'>生活用品（工业零件、玩具手办、医疗用品）和家具</span>。<br/>PC 如做推广，更适合讲 <span class='advice-key'>工业零件、配饰、车配件</span> 的 <span class='advice-key'>精准、稳定、批量、标准化处理</span>。</div></li>
   </ul>
 </div>
 
+
+<div class="section card" id="sec-portrait-overview" style="scroll-margin-top:20px;margin-bottom:32px">
+  <h2 style="margin-top:0">二、用户需求画像分析</h2>
   <style>
-  #sec-compare .tbl-wrap table { table-layout: fixed; width: 100%; }
-  #sec-compare .tbl-wrap th:nth-child(1), #sec-compare .tbl-wrap td:nth-child(1) { width: 7%; }
-  #sec-compare .tbl-wrap th:nth-child(2), #sec-compare .tbl-wrap td:nth-child(2) { width: 8%; white-space: nowrap; }
-  #sec-compare .tbl-wrap th:nth-child(3), #sec-compare .tbl-wrap td:nth-child(3),
-  #sec-compare .tbl-wrap th:nth-child(4), #sec-compare .tbl-wrap td:nth-child(4) { width: 28%; vertical-align: top; line-height: 1.65; word-break: break-word; white-space: normal; }
-  #sec-compare .tbl-wrap th:nth-child(5), #sec-compare .tbl-wrap td:nth-child(5),
-  #sec-compare .tbl-wrap th:nth-child(6), #sec-compare .tbl-wrap td:nth-child(6) { width: 14.5%; vertical-align: top; line-height: 1.6; word-break: break-word; white-space: normal; font-size: 12px; }
-  #sec-compare .thumb-text-cell { display:flex; flex-direction:column; gap:8px; }
-  #sec-compare .thumb-stack { display:flex; flex-direction:column; gap:8px; }
-  #sec-compare .thumb-stack-item { display:flex; align-items:center; gap:8px; min-height:56px; }
-  #sec-compare .thumb-stack-idx { width:14px; font-size:12px; color:var(--muted); font-weight:700; }
-  #sec-compare .thumb-empty { display:inline-flex; width:56px; height:56px; align-items:center; justify-content:center; border-radius:4px; background:#f5f6f8; color:var(--muted); }
-  #sec-compare .thumb-line-item { display:grid; grid-template-columns:56px 1fr; gap:10px; align-items:center; min-height:56px; }
-  #sec-compare .thumb-line-thumb { display:flex; align-items:center; justify-content:center; }
-  #sec-compare .thumb-line-text { font-size:13px; line-height:1.7; }
+  #sec-portrait-overview .tbl-wrap { overflow-x:auto; }
+  #sec-portrait-overview .tbl-wrap table { table-layout: fixed; width: 100%; min-width: 1360px; }
+  #sec-portrait-overview .tbl-wrap td, #sec-portrait-overview .tbl-wrap th { vertical-align: top; }
+  #sec-portrait-overview .portrait-example-row { display:flex; gap:10px; align-items:flex-start; }
+  #sec-portrait-overview .portrait-example { width:72px; display:flex; flex-direction:column; gap:4px; text-align:center; }
+  #sec-portrait-overview .portrait-caption { font-size:11px; color:var(--muted); line-height:1.4; word-break:break-word; }
+  #sec-portrait-overview .portrait-judgement { display:flex; flex-direction:column; gap:6px; }
+  #sec-portrait-overview .portrait-title { display:inline-block; align-self:flex-start; color:var(--text); font-size:13px; font-weight:700; }
+  #sec-portrait-overview .portrait-claim { font-size:13px; line-height:1.8; color:var(--text); }
+  #sec-portrait-overview .portrait-evidence { font-size:12px; line-height:1.75; color:var(--sub); }
+  #sec-portrait-overview .portrait-key { font-weight:700; color:#24477f; }
+  #sec-portrait-overview .report-thumb { margin:0 auto; }
+  #sec-portrait-overview .thumb-text-cell { display:flex; flex-direction:column; gap:8px; }
+  #sec-portrait-overview .thumb-line-item.text-first { display:grid; grid-template-columns:minmax(0,1fr) 56px; gap:10px; align-items:center; min-height:56px; }
+  #sec-portrait-overview .thumb-line-thumb { display:flex; align-items:center; justify-content:center; }
+  #sec-portrait-overview .thumb-line-text { font-size:13px; line-height:1.7; word-break:break-word; }
+  #sec-portrait-overview .overview-table .tbl-wrap table { table-layout: fixed; width: 100%; }
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(1), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(1) { width: 11%; vertical-align: top; line-height: 1.6; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(2), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(2) { width: 28%; vertical-align: top; line-height: 1.8; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(3), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(3) { width: 13%; vertical-align: top; line-height: 1.7; word-break: break-word; white-space: normal; font-size: 12px; }
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(4), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(4),
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(5), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(5) { width: 18%; vertical-align: top; line-height: 1.65; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .overview-table .tbl-wrap th:nth-child(6), #sec-portrait-overview .overview-table .tbl-wrap td:nth-child(6) { width: 12%; vertical-align: top; line-height: 1.7; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap table { table-layout: fixed; width: 100%; min-width: 1440px; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(1), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(1) { width: 8%; vertical-align: top; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(2), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(2) { width: 24%; vertical-align: top; line-height: 1.8; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(3), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(3) { width: 8%; vertical-align: top; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(4), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(4),
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(5), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(5),
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(6), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(6) { width: 12%; vertical-align: top; line-height: 1.7; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(7), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(7) { width: 12%; vertical-align: top; line-height: 1.7; word-break: break-word; white-space: normal; }
+  #sec-portrait-overview .portrait-detail-table .tbl-wrap th:nth-child(8), #sec-portrait-overview .portrait-detail-table .tbl-wrap td:nth-child(8) { width: 12%; vertical-align: top; line-height: 1.7; }
   </style>
-  <h3 style="font-size:16px;margin:8px 0 10px">数据对照表</h3>
-  <div class="tbl-wrap" style="overflow-x:auto"><div class="tbl-wrap"><table><thead><tr><th>端</th><th>有效记录数</th><th>TOP3 二级场景</th><th>TOP3 二级主体</th><th>场景分布</th><th>主体分布</th></tr></thead><tbody><tr><td>内嵌设计室</td><td>3,981</td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/76c5c55876215f01.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/76c5c55876215f01.png" alt="社交配图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 社交配图（16.38%，652）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c40a7153bfeb4ddb.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c40a7153bfeb4ddb.png" alt="商品详情页" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 商品详情页（15.88%，632）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/fb8ad6338dd9157e.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/fb8ad6338dd9157e.png" alt="Logo/图标提取" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. Logo/图标提取（6.18%，246）</div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/266daa0409b115a8.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/266daa0409b115a8.png" alt="卡通人物/插画" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 卡通人物/插画（11.13%，443）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/76c5c55876215f01.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/76c5c55876215f01.png" alt="生活人像(亲子/家庭/情侣)" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 生活人像(亲子/家庭/情侣)（8.49%，338）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/aba7df3f4e28a9a5.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/aba7df3f4e28a9a5.png" alt="模特/服装展示" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 模特/服装展示（8.26%，329）</div></div></div></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=46 · TOP3 38.4% · TOP10 70.9% · 偏度 3.00</span></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=110 · TOP3 27.9% · TOP10 55.7% · 偏度 3.75</span></td></tr><tr><td>秀秀PC</td><td>2,617</td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/d4016e338e235b69.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/d4016e338e235b69.jpg" alt="商品详情页" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 商品详情页（17.00%，445）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c1a02e1a95982865.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c1a02e1a95982865.jpg" alt="商品去底/白底图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 商品去底/白底图（12.34%，323）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3cd02a5419d2c2e6.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3cd02a5419d2c2e6.jpg" alt="电商主图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 电商主图（9.78%，256）</div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/40e5e448abe6eea5.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/40e5e448abe6eea5.jpg" alt="书籍/教材/试卷/流程图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 书籍/教材/试卷/流程图（7.22%，189）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/94a2475ad9097130.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/94a2475ad9097130.jpg" alt="文字效果/字体设计/贴纸" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 文字效果/字体设计/贴纸（5.46%，143）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c1a02e1a95982865.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c1a02e1a95982865.jpg" alt="工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)（4.81%，126）</div></div></div></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=45 · TOP3 39.1% · TOP10 74.9% · 偏度 2.55</span></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=107 · TOP3 17.5% · TOP10 44.5% · 偏度 2.59</span></td></tr><tr><td>设计室APP</td><td>3,525</td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/a65c9bdc455b027b.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/a65c9bdc455b027b.png" alt="商品详情页" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 商品详情页（43.49%，1,533）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3238a7cea6714c76.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3238a7cea6714c76.png" alt="社交配图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 社交配图（13.16%，464）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/afa6acdade9d619c.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/afa6acdade9d619c.png" alt="电商主图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 电商主图（9.96%，351）</div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/a65c9bdc455b027b.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/a65c9bdc455b027b.png" alt="模特/服装展示" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 模特/服装展示（23.01%，811）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/eddb944f811691c1.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/eddb944f811691c1.png" alt="上装(T恤/衬衫/卫衣/外套/马甲)" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 上装(T恤/衬衫/卫衣/外套/马甲)（10.35%，365）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3238a7cea6714c76.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3238a7cea6714c76.png" alt="儿童/婴儿人像" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 儿童/婴儿人像（4.26%，150）</div></div></div></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=41 · TOP3 66.6% · TOP10 89.2% · 偏度 5.13</span></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=105 · TOP3 37.6% · TOP10 61.9% · 偏度 6.91</span></td></tr><tr><td>Web</td><td>1,999</td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/fe943d6f56c73bda.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/fe943d6f56c73bda.jpg" alt="商品详情页" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 商品详情页（15.96%，319）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/e635647d2b72b6fd.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/e635647d2b72b6fd.jpg" alt="商品去底/白底图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 商品去底/白底图（11.91%，238）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/d9a24aec4eac19fa.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/d9a24aec4eac19fa.jpg" alt="电商主图" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. 电商主图（10.06%，201）</div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/5f049c2ca596d417.jpeg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/5f049c2ca596d417.jpeg" alt="卡通人物/插画" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">1. 卡通人物/插画（9.35%，187）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/63306481225f18bf.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/63306481225f18bf.jpg" alt="文字效果/字体设计/贴纸" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">2. 文字效果/字体设计/贴纸（6.15%，123）</div></div><div class="thumb-line-item"><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/b936c8e7577b7819.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/b936c8e7577b7819.jpg" alt="Logo/品牌标识" onerror="this.style.display='none'" /></span></div><div class="thumb-line-text">3. Logo/品牌标识（5.35%，107）</div></div></div></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=41 · TOP3 37.9% · TOP10 77.0% · 偏度 2.18</span></td><td><strong>头部较集中，长尾较散</strong><br/><span class='muted' style='font-size:12px'>n=103 · TOP3 20.9% · TOP10 45.6% · 偏度 3.33</span></td></tr></tbody></table></div></div>
+  <h3 id="sec-portrait-summary">I、各端用户画像总览</h3>
+  <div class="overview-table"><div class="tbl-wrap"><table><thead><tr><th>端</th><th>用户画像</th><th>一级场景覆盖（累计>70%）</th><th>TOP3 二级场景</th><th>TOP3 二级主体</th><th>复杂度标签占比</th></tr></thead><tbody><tr><td>内嵌设计室<br/><span class='muted' style='font-size:12px;line-height:1.6'>有效记录数 3,981</span></td><td><div class='portrait-judgement'><div class='portrait-title'>C端生活人像和B端电商/设计混合用户</div><div class='portrait-claim'>社交传播、商品展示、常见创意元素处理并存。</div><div class='portrait-evidence'>社交配图、商品详情页、Logo/图标提取都靠前，社交配图和商品详情页场景更突出，社交配图中生活人像占比最大，为35.4%，主要为C端人像照片；其次是模特/服装展示17.7% - 类型比较杂，包含明星、艺术照、社媒推广类模特图；细碎边缘和人像轮廓处理较多；不规则边缘主体较多。</div></div></td><td>• 电商（31.7%）<br/>• 设计/创意（24.6%）<br/>• 头像/社交（23.9%）<br/><span class='muted' style='font-size:12px;line-height:1.6'>累计 80.2%</span></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 社交配图（16.38%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/76c5c55876215f01.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/76c5c55876215f01.png" alt="社交配图" onerror="this.onerror=null;this.src='../report_thumbs/76c5c55876215f01.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/76c5c55876215f01.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品详情页（15.88%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c40a7153bfeb4ddb.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c40a7153bfeb4ddb.png" alt="商品详情页" onerror="this.onerror=null;this.src='../report_thumbs/c40a7153bfeb4ddb.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/c40a7153bfeb4ddb.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• Logo/图标提取（6.18%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/fb8ad6338dd9157e.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/fb8ad6338dd9157e.png" alt="Logo/图标提取" onerror="this.onerror=null;this.src='../report_thumbs/fb8ad6338dd9157e.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/fb8ad6338dd9157e.png');}" /></span></div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 卡通人物/插画（11.13%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/266daa0409b115a8.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/266daa0409b115a8.png" alt="卡通人物/插画" onerror="this.onerror=null;this.src='../report_thumbs/266daa0409b115a8.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/266daa0409b115a8.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 生活人像(亲子/家庭/情侣)（8.49%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/76c5c55876215f01.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/76c5c55876215f01.png" alt="生活人像(亲子/家庭/情侣)" onerror="this.onerror=null;this.src='../report_thumbs/76c5c55876215f01.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/76c5c55876215f01.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 模特/服装展示（8.26%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/aba7df3f4e28a9a5.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/aba7df3f4e28a9a5.png" alt="模特/服装展示" onerror="this.onerror=null;this.src='../report_thumbs/aba7df3f4e28a9a5.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/aba7df3f4e28a9a5.png');}" /></span></div></div></div></td><td>• 简单边缘（23.2%）<br/>• 复杂边缘（16.1%）<br/>• 发丝/毛发（12.7%）<br/>• 多主体（12.5%）<br/>• 反光/高光（12.1%）</td></tr><tr><td>秀秀PC<br/><span class='muted' style='font-size:12px;line-height:1.6'>有效记录数 2,617</span></td><td><div class='portrait-judgement'><div class='portrait-title'>重电商、轻设计办公的桌面端用户</div><div class='portrait-claim'>一级场景明显以电商为主，设计和办公更多是补充。</div><div class='portrait-evidence'>电商场景靠前，同时书籍/教材/试卷/流程图、工业零件/工具也进入头部主体，主体镂空占比也更高，更接近商家、工厂，以及行政、运营、教培等桌面端工作用户；反光材质主体较多；多主体构图较常见。</div></div></td><td>• 电商（45.3%）<br/>• 设计/创意（18.1%）<br/>• 办公/商务（12.2%）<br/><span class='muted' style='font-size:12px;line-height:1.6'>累计 75.6%</span></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品详情页（17.00%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/d4016e338e235b69.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/d4016e338e235b69.jpg" alt="商品详情页" onerror="this.onerror=null;this.src='../report_thumbs/d4016e338e235b69.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/d4016e338e235b69.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品去底/白底图（12.34%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c1a02e1a95982865.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c1a02e1a95982865.jpg" alt="商品去底/白底图" onerror="this.onerror=null;this.src='../report_thumbs/c1a02e1a95982865.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/c1a02e1a95982865.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 电商主图（9.78%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3cd02a5419d2c2e6.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3cd02a5419d2c2e6.jpg" alt="电商主图" onerror="this.onerror=null;this.src='../report_thumbs/3cd02a5419d2c2e6.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/3cd02a5419d2c2e6.jpg');}" /></span></div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 书籍/教材/试卷/流程图（7.22%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/40e5e448abe6eea5.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/40e5e448abe6eea5.jpg" alt="书籍/教材/试卷/流程图" onerror="this.onerror=null;this.src='../report_thumbs/40e5e448abe6eea5.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/40e5e448abe6eea5.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 文字效果/字体设计/贴纸（5.46%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/94a2475ad9097130.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/94a2475ad9097130.jpg" alt="文字效果/字体设计/贴纸" onerror="this.onerror=null;this.src='../report_thumbs/94a2475ad9097130.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/94a2475ad9097130.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)（4.81%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/c1a02e1a95982865.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c1a02e1a95982865.jpg" alt="工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)" onerror="this.onerror=null;this.src='../report_thumbs/c1a02e1a95982865.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/c1a02e1a95982865.jpg');}" /></span></div></div></div></td><td>• 简单边缘（29.8%）<br/>• 反光/高光（14.3%）<br/>• 多主体（13.2%）<br/>• 复杂边缘（11.9%）<br/>• 主体有镂空（10.9%）</td></tr><tr><td>设计室APP<br/><span class='muted' style='font-size:12px;line-height:1.6'>有效记录数 3,525</span></td><td><div class='portrait-judgement'><div class='portrait-title'>社交平台服饰电商用户</div><div class='portrait-claim'>需求明显围绕商品推广图，尤其偏服饰展示。</div><div class='portrait-evidence'>一级场景覆盖以电商、头像/社交为主；除了商品图本身，社交配图里也常见电商模特图、童装展示图、对镜自拍、户外穿搭图和社交电商平台截图比如抖音商城/小红书，进一步说明这类用户更接近社交平台电商经营者；商品图里模特和服饰轮廓处理更多；不规则边缘主体较多。</div></div></td><td>• 电商（69.2%）<br/>• 头像/社交（16.1%）<br/><span class='muted' style='font-size:12px;line-height:1.6'>累计 85.3%</span></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品详情页（43.49%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/a65c9bdc455b027b.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/a65c9bdc455b027b.png" alt="商品详情页" onerror="this.onerror=null;this.src='../report_thumbs/a65c9bdc455b027b.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/a65c9bdc455b027b.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 社交配图（13.16%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3238a7cea6714c76.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3238a7cea6714c76.png" alt="社交配图" onerror="this.onerror=null;this.src='../report_thumbs/3238a7cea6714c76.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/3238a7cea6714c76.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 电商主图（9.96%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/afa6acdade9d619c.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/afa6acdade9d619c.png" alt="电商主图" onerror="this.onerror=null;this.src='../report_thumbs/afa6acdade9d619c.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/afa6acdade9d619c.png');}" /></span></div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 模特/服装展示（23.01%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/a65c9bdc455b027b.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/a65c9bdc455b027b.png" alt="模特/服装展示" onerror="this.onerror=null;this.src='../report_thumbs/a65c9bdc455b027b.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/a65c9bdc455b027b.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 上装(T恤/衬衫/卫衣/外套/马甲)（10.35%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/eddb944f811691c1.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/eddb944f811691c1.png" alt="上装(T恤/衬衫/卫衣/外套/马甲)" onerror="this.onerror=null;this.src='../report_thumbs/eddb944f811691c1.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/eddb944f811691c1.png');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 儿童/婴儿人像（4.26%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/3238a7cea6714c76.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/3238a7cea6714c76.png" alt="儿童/婴儿人像" onerror="this.onerror=null;this.src='../report_thumbs/3238a7cea6714c76.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/3238a7cea6714c76.png');}" /></span></div></div></div></td><td>• 简单边缘（21.8%）<br/>• 复杂边缘（15.6%）<br/>• 发丝/毛发（13.2%）<br/>• 多主体（12.6%）<br/>• 反光/高光（11.5%）<br/>• 前背景色接近（10.5%）</td></tr><tr><td>Web<br/><span class='muted' style='font-size:12px;line-height:1.6'>有效记录数 1,999</span></td><td><div class='portrait-judgement'><div class='portrait-title'>电商+设计桌面处理用户</div><div class='portrait-claim'>电商商品处理与设计素材需求并存，两类需求区分更明显。</div><div class='portrait-evidence'>电商+设计/创意占比覆盖71.7%，头部场景集中在商品详情页、商品去底/白底图、电商主图，但头部主体是卡通人物/插画、文字效果/字体设计/贴纸、Logo/品牌标识，说明这一端除了商品图，也承接插画、字效、Logo 等多类设计素材；不规则边缘主体较多；反光材质主体较多。</div></div></td><td>• 电商（44.0%）<br/>• 设计/创意（27.8%）<br/><span class='muted' style='font-size:12px;line-height:1.6'>累计 71.7%</span></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品详情页（15.96%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/fe943d6f56c73bda.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/fe943d6f56c73bda.jpg" alt="商品详情页" onerror="this.onerror=null;this.src='../report_thumbs/fe943d6f56c73bda.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/fe943d6f56c73bda.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 商品去底/白底图（11.91%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/e635647d2b72b6fd.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/e635647d2b72b6fd.jpg" alt="商品去底/白底图" onerror="this.onerror=null;this.src='../report_thumbs/e635647d2b72b6fd.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/e635647d2b72b6fd.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 电商主图（10.06%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/d9a24aec4eac19fa.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/d9a24aec4eac19fa.jpg" alt="电商主图" onerror="this.onerror=null;this.src='../report_thumbs/d9a24aec4eac19fa.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/d9a24aec4eac19fa.jpg');}" /></span></div></div></div></td><td><div class="thumb-text-cell"><div class="thumb-line-item text-first"><div class="thumb-line-text">• 卡通人物/插画（9.35%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/5f049c2ca596d417.jpeg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/5f049c2ca596d417.jpeg" alt="卡通人物/插画" onerror="this.onerror=null;this.src='../report_thumbs/5f049c2ca596d417.jpeg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/5f049c2ca596d417.jpeg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• 文字效果/字体设计/贴纸（6.15%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/63306481225f18bf.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/63306481225f18bf.jpg" alt="文字效果/字体设计/贴纸" onerror="this.onerror=null;this.src='../report_thumbs/63306481225f18bf.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/63306481225f18bf.jpg');}" /></span></div></div><div class="thumb-line-item text-first"><div class="thumb-line-text">• Logo/品牌标识（5.35%）</div><div class="thumb-line-thumb"><span class="thumb-zoom" data-src="report_thumbs/b936c8e7577b7819.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/b936c8e7577b7819.jpg" alt="Logo/品牌标识" onerror="this.onerror=null;this.src='../report_thumbs/b936c8e7577b7819.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/b936c8e7577b7819.jpg');}" /></span></div></div></div></td><td>• 简单边缘（27.5%）<br/>• 反光/高光（16.6%）<br/>• 复杂边缘（16.1%）<br/>• 多主体（14.5%）</td></tr></tbody></table></div></div>
+  <p style="color:var(--sub);font-size:14px;line-height:1.9;margin:12px 0 10px">从整体表看，当前最值得继续拆解的是 <strong>商品图</strong> 与 <strong>设计/创意</strong>：前者承接各端最核心的商业化出图需求，后者最能拉开素材类型、排版方式与复用链路上的差异，因此后续重点下钻这两类。</p>
+  <h3 id="sec-portrait-ecomm" style="margin-top:18px">II、电商场景各端用户画像</h3>
+  <div class="portrait-detail-table"><div class="tbl-wrap"><table><thead><tr><th>端</th><th>用户画像判断</th><th>电商相关占比</th><th>主场景</th><th>主一级主体</th><th>主二级主体</th><th>复杂度</th><th>典型图示</th></tr></thead><tbody><tr><td>内嵌设计室</td><td><div class='portrait-judgement'><div class='portrait-title'>复合型电商用户</div><div class='portrait-claim'>商品图更偏模特服饰图，包含社交电商平台电商经营者的需求。</div><div class='portrait-evidence'>商品类型偏模特服饰图，和APP端相比白底图占比更多，专业用户较APP端更多。社交配图中也有不少来自社交电商平台截图比如抖音商城/小红书，进一步说明包含用户社交电商平台电商经营者的需求。</div></div></td><td><strong>31.7%</strong></td><td>商品详情页（50.1%）<br/>商品去底/白底图（18.5%）</td><td>服装（21.5%）<br/>人像（13.5%）</td><td>模特/服装展示（13.0%）<br/>上装(T恤/衬衫/卫衣/外套/马甲)（11.4%）</td><td>• 简单边缘（22.7%）<br/>• 反光/高光（17.7%）<br/>• 复杂边缘（13.4%）<br/>• 多主体（12.2%）<br/>• 主体有镂空（10.6%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/aba7df3f4e28a9a5.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/aba7df3f4e28a9a5.png" alt="模特/服装展示" onerror="this.onerror=null;this.src='../report_thumbs/aba7df3f4e28a9a5.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/aba7df3f4e28a9a5.png');}" /></span><div class='portrait-caption'>模特/服装展示</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/20401139c2c64495.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/20401139c2c64495.jpg" alt="上装(T恤/衬衫/卫衣/外套/马甲)" onerror="this.onerror=null;this.src='../report_thumbs/20401139c2c64495.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/20401139c2c64495.jpg');}" /></span><div class='portrait-caption'>上装(T恤/衬衫/卫衣/外套/马甲)</div></div></div></td></tr><tr><td>秀秀PC</td><td><div class='portrait-judgement'><div class='portrait-title'>工业零件、配件处理专业型用户</div><div class='portrait-claim'>商品图更偏工业件和静物类商品素材。</div><div class='portrait-evidence'>工业零件+车配件覆盖商品图13.9%的需求，鞋包配饰（围巾29.3%，首饰22.5%，箱包18.7%）覆盖11.2%的需求，说明PC商品图更多承接结构复杂、精度要求高、偏标准化生产流程的零件、配件素材处理需求。白底图占比较移动端更大，且镂空结构占比也更高，说明PC商品图更偏专业型用户。</div></div></td><td><strong>45.3%</strong></td><td>商品详情页（37.5%）<br/>商品去底/白底图（27.3%）</td><td>生活用品（20.3%）<br/>鞋包配饰（11.2%）</td><td>工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)（9.1%）<br/>车配件(刹车卡钳/扰流板/行车记录仪/减震器等)（4.4%）</td><td>• 简单边缘（24.6%）<br/>• 反光/高光（20.2%）<br/>• 多主体（14.4%）<br/>• 主体有镂空（12.3%）<br/>• 复杂边缘（11.1%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/c1a02e1a95982865.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c1a02e1a95982865.jpg" alt="工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)" onerror="this.onerror=null;this.src='../report_thumbs/c1a02e1a95982865.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/c1a02e1a95982865.jpg');}" /></span><div class='portrait-caption'>工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/ccd5aba1d0d54c80.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/ccd5aba1d0d54c80.jpg" alt="车配件(刹车卡钳/扰流板/行车记录仪/减震器等)" onerror="this.onerror=null;this.src='../report_thumbs/ccd5aba1d0d54c80.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/ccd5aba1d0d54c80.jpg');}" /></span><div class='portrait-caption'>车配件(刹车卡钳/扰流板/行车记录仪/减震器等)</div></div></div></td></tr><tr><td>设计室APP</td><td><div class='portrait-judgement'><div class='portrait-title'>社交平台电商出图用户</div><div class='portrait-claim'>商品图明显围绕模特服饰包括童装出图。</div><div class='portrait-evidence'>模特和上装占比较大，社交配图头部也常见电商模特图、童装展示图、对镜自拍、户外穿搭图和平台截图，说明这类需求更接近社交平台类电商经营；不规则边缘主体较多；多主体构图较常见。</div></div></td><td><strong>69.2%</strong></td><td>商品详情页（62.9%）<br/>电商主图（14.4%）</td><td>服装（33.0%）<br/>人像（24.7%）</td><td>模特/服装展示（23.7%）<br/>上装(T恤/衬衫/卫衣/外套/马甲)（14.9%）</td><td>• 简单边缘（23.0%）<br/>• 复杂边缘（13.8%）<br/>• 多主体（13.7%）<br/>• 反光/高光（12.5%）<br/>• 前背景色接近（11.2%）<br/>• 发丝/毛发（10.5%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/a65c9bdc455b027b.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/a65c9bdc455b027b.png" alt="模特/服装展示" onerror="this.onerror=null;this.src='../report_thumbs/a65c9bdc455b027b.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/a65c9bdc455b027b.png');}" /></span><div class='portrait-caption'>模特/服装展示</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/eddb944f811691c1.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/eddb944f811691c1.png" alt="上装(T恤/衬衫/卫衣/外套/马甲)" onerror="this.onerror=null;this.src='../report_thumbs/eddb944f811691c1.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/eddb944f811691c1.png');}" /></span><div class='portrait-caption'>上装(T恤/衬衫/卫衣/外套/马甲)</div></div></div></td></tr><tr><td>Web</td><td><div class='portrait-judgement'><div class='portrait-title'>静物商品商户</div><div class='portrait-claim'>商品图更偏静物商品展示。</div><div class='portrait-evidence'>头部一级主体是 <span class='portrait-key'>生活用品、家居家具</span>，生活用品主要包含工业零件（24%）、玩具手办（19.1%）、医疗用品（18%）等，且主场景集中在 <span class='portrait-key'>商品详情页、商品去底/白底图</span>，区别于模特穿搭型商品图；反光材质主体较多；多主体构图较常见。</div></div></td><td><strong>44.0%</strong></td><td>商品详情页（36.3%）<br/>商品去底/白底图（27.1%）</td><td>生活用品（18.2%）<br/>家居家具（13.1%）</td><td>模特/服装展示（8.0%）<br/>工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)（4.7%）</td><td>• 简单边缘（24.4%）<br/>• 反光/高光（22.8%）<br/>• 多主体（15.3%）<br/>• 复杂边缘（14.4%）<br/>• 前背景色接近（10.6%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/d9a24aec4eac19fa.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/d9a24aec4eac19fa.jpg" alt="模特/服装展示" onerror="this.onerror=null;this.src='../report_thumbs/d9a24aec4eac19fa.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/d9a24aec4eac19fa.jpg');}" /></span><div class='portrait-caption'>模特/服装展示</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/62d49422eebae7e3.jpeg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/62d49422eebae7e3.jpeg" alt="工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)" onerror="this.onerror=null;this.src='../report_thumbs/62d49422eebae7e3.jpeg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/62d49422eebae7e3.jpeg');}" /></span><div class='portrait-caption'>工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)</div></div></div></td></tr></tbody></table></div></div>
+  <h3 id="sec-portrait-creative" style="margin-top:18px">III、设计/创意场景各端用户画像</h3>
+  <p style="color:var(--sub);font-size:14px;line-height:1.9;margin:8px 0 10px">四端共性大于差异：设计/创意样本都主要围绕 <strong>卡通插画、Logo、字效贴纸</strong> 这几类元素；差异主要体现在 <strong>PC 更偏品牌标识和字效素材</strong>、<strong>Web 的图文混合场景更高</strong>、<strong>APP 在整体里更次要</strong>。</p>
+  <div class="portrait-detail-table"><div class="tbl-wrap"><table><thead><tr><th>端</th><th>用户画像判断</th><th>设计/创意占比</th><th>主场景</th><th>主一级主体</th><th>主二级主体</th><th>复杂度</th><th>典型图示</th></tr></thead><tbody><tr><td>内嵌设计室</td><td><div class='portrait-judgement'><div class='portrait-title'>平面设计和品牌用户</div><div class='portrait-claim'>设计/创意里图像素材和品牌标识素材都比较突出。</div><div class='portrait-evidence'>头部主体集中在 <span class='portrait-key'>卡通人物/插画、Logo/品牌标识</span>，更接近需要快速提取插画、Logo、字效这类常见创意元素做内容配图的人群；镂空结构较多；多主体构图较常见。</div></div></td><td><strong>24.6%</strong></td><td>Logo/图标提取（25.1%）<br/>海报设计（21.7%）</td><td>设计素材（60.1%）<br/>图标标识（29.4%）</td><td>卡通人物/插画（31.3%）<br/>Logo/品牌标识（23.4%）</td><td>• 简单边缘（32.6%）<br/>• 多主体（15.1%）<br/>• 主体有镂空（14.5%）<br/>• 复杂边缘（13.5%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/266daa0409b115a8.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/266daa0409b115a8.png" alt="卡通人物/插画" onerror="this.onerror=null;this.src='../report_thumbs/266daa0409b115a8.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/266daa0409b115a8.png');}" /></span><div class='portrait-caption'>卡通人物/插画</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/fb8ad6338dd9157e.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/fb8ad6338dd9157e.png" alt="Logo/品牌标识" onerror="this.onerror=null;this.src='../report_thumbs/fb8ad6338dd9157e.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/fb8ad6338dd9157e.png');}" /></span><div class='portrait-caption'>Logo/品牌标识</div></div></div></td></tr><tr><td>秀秀PC</td><td><div class='portrait-judgement'><div class='portrait-title'>文字类设计用户</div><div class='portrait-claim'>设计/创意更偏文字、Logo、图标这类品牌表达素材。</div><div class='portrait-evidence'><span class='portrait-key'>文字效果/字体设计/贴纸、Logo/品牌标识</span> 排在卡通人物/插画前面，说明 PC 端更常见文字、Logo、图标这类文本/标识型元素；镂空结构较多；多主体构图较常见。</div></div></td><td><strong>18.2%</strong></td><td>Logo/图标提取（28.8%）<br/>海报设计（24.6%）</td><td>设计素材（51.8%）<br/>图标标识（35.0%）</td><td>文字效果/字体设计/贴纸（24.2%）<br/>Logo/品牌标识（23.8%）</td><td>• 简单边缘（38.2%）<br/>• 主体有镂空（17.5%）<br/>• 多主体（13.8%）<br/>• 复杂边缘（10.7%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/02ba73610f92ddcd.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/02ba73610f92ddcd.png" alt="文字效果/字体设计/贴纸" onerror="this.onerror=null;this.src='../report_thumbs/02ba73610f92ddcd.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/02ba73610f92ddcd.png');}" /></span><div class='portrait-caption'>文字效果/字体设计/贴纸</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/dc1be949d9c2f34d.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/dc1be949d9c2f34d.jpg" alt="Logo/品牌标识" onerror="this.onerror=null;this.src='../report_thumbs/dc1be949d9c2f34d.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/dc1be949d9c2f34d.jpg');}" /></span><div class='portrait-caption'>Logo/品牌标识</div></div></div></td></tr><tr><td>设计室APP</td><td><div class='portrait-judgement'><div class='portrait-title'>轻量创意补充用户</div><div class='portrait-claim'>设计/创意在 APP 中更像补充需求，不是主使用场景。</div><div class='portrait-evidence'>头部仍集中在 <span class='portrait-key'>卡通人物/插画、Logo/品牌标识</span>，没有分化出独特的素材类型；镂空结构较多；多主体构图较常见。</div></div></td><td><strong>8.7%</strong></td><td>海报设计（23.4%）<br/>Logo/图标提取（20.5%）</td><td>设计素材（61.2%）<br/>图标标识（25.4%）</td><td>卡通人物/插画（30.3%）<br/>Logo/品牌标识（20.9%）</td><td>• 简单边缘（32.4%）<br/>• 主体有镂空（17.3%）<br/>• 多主体（14.8%）<br/>• 复杂边缘（12.7%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/4f287b0c2e40c556.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/4f287b0c2e40c556.png" alt="卡通人物/插画" onerror="this.onerror=null;this.src='../report_thumbs/4f287b0c2e40c556.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/4f287b0c2e40c556.png');}" /></span><div class='portrait-caption'>卡通人物/插画</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/c5d68224b38d74d4.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/c5d68224b38d74d4.png" alt="Logo/品牌标识" onerror="this.onerror=null;this.src='../report_thumbs/c5d68224b38d74d4.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/c5d68224b38d74d4.png');}" /></span><div class='portrait-caption'>Logo/品牌标识</div></div></div></td></tr><tr><td>Web</td><td><div class='portrait-judgement'><div class='portrait-title'>设计素材类型更杂的用户</div><div class='portrait-claim'>平面拼贴、logo场景较突出。</div><div class='portrait-evidence'>Web 端承接的设计素材类型更杂，既有插画、字效，也有 Logo 类素材，海报设计场景占比较其他端更低，（该标签多在识别到完整海报时触发）由此推测，该类用户相对更专业，通常具备专属设计素材，而非基于成品海报进行抠图、素材拆解等二次编辑；不规则边缘主体较多；多主体构图较常见。</div></div></td><td><strong>27.8%</strong></td><td>平面拼贴/合成（23.4%）<br/>Logo/图标提取（21.4%）</td><td>设计素材（61.8%）<br/>图标标识（27.2%）</td><td>卡通人物/插画（27.9%）<br/>文字效果/字体设计/贴纸（20.0%）</td><td>• 简单边缘（34.5%）<br/>• 复杂边缘（17.2%）<br/>• 多主体（15.9%）<br/>• 反光/高光（11.6%）</td><td><div class='portrait-example-row'><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/06f486d036f70697.png" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/06f486d036f70697.png" alt="卡通人物/插画" onerror="this.onerror=null;this.src='../report_thumbs/06f486d036f70697.png';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/06f486d036f70697.png');}" /></span><div class='portrait-caption'>卡通人物/插画</div></div><div class='portrait-example'><span class="thumb-zoom" data-src="report_thumbs/63306481225f18bf.jpg" onclick="window.thumbModalShow(this)"><img class="report-thumb" src="report_thumbs/63306481225f18bf.jpg" alt="文字效果/字体设计/贴纸" onerror="this.onerror=null;this.src='../report_thumbs/63306481225f18bf.jpg';var z=this.closest('.thumb-zoom');if(z){z.setAttribute('data-src','../report_thumbs/63306481225f18bf.jpg');}" /></span><div class='portrait-caption'>文字效果/字体设计/贴纸</div></div></div></td></tr></tbody></table></div></div>
+  <!-- 社交配图用户画像差异模块已暂时注释 -->
 </div>
 
 
+<div class="section card" id="sec-appendix" style="scroll-margin-top:20px;margin-bottom:32px">
+  <h2 style="margin-top:0">附录</h2>
+  <div class="section" id="sec-appendix-scenes" style="scroll-margin-top:20px">
+    <h3>一、场景明细</h3>
+    
 <section class="section" id="ch-neiqian" style="scroll-margin-top:20px">
-  <h2>内嵌设计室</h2>
+  <h3>I、内嵌设计室</h3>
   <div class="hero" style="margin-bottom:20px;padding:20px 24px">
     <p class="sub">有效记录（含 scene_l2）：<strong>3,981</strong> · 全表行数：<strong>4,000</strong> · 不同二级场景数：<strong>46</strong></p>
     <p style="font-size:13px;color:var(--muted);margin-top:8px"><strong>主体口径</strong>：正文与对照表、交叉分析均为<strong>二级主体（subject_l2）</strong>；一级类目不在此展开。二级主体 TOP40 见文末<strong>附录</strong>（<a href="#appendix-l2-neiqian">内嵌设计室</a>）。</p>
   </div>
   <h3>1. 二级场景占比</h3>
   <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0'>共 <strong>46</strong> 个二级场景，含 scene_l2 的有效记录合计 <strong>3,981</strong>。TOP1「社交配图」<strong>16.4%</strong>，TOP3 合计 <strong>38.4%</strong>。</p><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>重点场景：</strong>「社交配图」<strong>16.4%</strong>；「商品详情页」<strong>15.9%</strong>；「Logo/图标提取」<strong>6.2%</strong>；覆盖约 <strong>38.4%</strong> 的有效需求。</p></div>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="d1a5273999944e96a9943c8ac762b438" class="chart-container" style="width:1060px; height:1012px; "></div>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="8164037c7ee54cf7bc40de4486b88eb6" class="chart-container" style="width:1060px; height:1012px; "></div>
     <script>
-        var chart_d1a5273999944e96a9943c8ac762b438 = echarts.init(
-            document.getElementById('d1a5273999944e96a9943c8ac762b438'), 'white', {renderer: 'canvas'});
-        var option_d1a5273999944e96a9943c8ac762b438 = {
+        var chart_8164037c7ee54cf7bc40de4486b88eb6 = echarts.init(
+            document.getElementById('8164037c7ee54cf7bc40de4486b88eb6'), 'white', {renderer: 'canvas'});
+        var option_8164037c7ee54cf7bc40de4486b88eb6 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -461,16 +497,17 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_d1a5273999944e96a9943c8ac762b438.setOption(option_d1a5273999944e96a9943c8ac762b438);
+        chart_8164037c7ee54cf7bc40de4486b88eb6.setOption(option_8164037c7ee54cf7bc40de4486b88eb6);
     </script></div></div>
+  <div class="card" style="margin:14px 0 0"><h4 style='margin:0 0 8px;font-size:15px;color:var(--sub)'>复杂度标签词云</h4><p style='color:var(--muted);font-size:13px;margin:0 0 10px'>按当前端原始 difficulty tags 词频统计，辅助理解这端常见的抠图难点。</p><div style='background:#fff;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:16px;text-align:center'><div style='font-size:13px;font-weight:700;color:#374151;margin-bottom:10px'>内嵌设计室复杂度标签词云</div><span style="font-size:47px;color:#24477f;opacity:1.0;margin:5px 10px;display:inline-block;font-weight:700">简单边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(23.2%)</sub></span><span style="font-size:37px;color:#5a8bc9;opacity:0.6950043821209465;margin:5px 10px;display:inline-block;font-weight:700">复杂边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(16.1%)</sub></span><span style="font-size:32px;color:#0d6b2c;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">发丝/毛发<sub style="font-size:10px;font-weight:400;opacity:.7">(12.7%)</sub></span><span style="font-size:32px;color:#b85c00;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">多主体<sub style="font-size:10px;font-weight:400;opacity:.7">(12.5%)</sub></span><span style="font-size:31px;color:#5a4a7a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">反光/高光<sub style="font-size:10px;font-weight:400;opacity:.7">(12.1%)</sub></span><span style="font-size:27px;color:#4a5568;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">主体有镂空<sub style="font-size:10px;font-weight:400;opacity:.7">(9.3%)</sub></span><span style="font-size:27px;color:#1a3560;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">前背景色接近<sub style="font-size:10px;font-weight:400;opacity:.7">(8.7%)</sub></span><span style="font-size:19px;color:#c41e3a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">透明/玻璃质<sub style="font-size:10px;font-weight:400;opacity:.7">(3.1%)</sub></span><span style="font-size:18px;color:#0d6b4a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">半透明/纱质<sub style="font-size:10px;font-weight:400;opacity:.7">(2.3%)</sub></span></div><p style='font-size:13px;line-height:1.8;color:var(--sub);margin:10px 0 0'><strong>复杂度标签占比（>10%）：</strong>• 简单边缘（23.2%）<br/>• 复杂边缘（16.1%）<br/>• 发丝/毛发（12.7%）<br/>• 多主体（12.5%）<br/>• 反光/高光（12.1%）；细碎边缘和人像轮廓处理较多；不规则边缘主体较多。</p></div>
   <h3>2. 场景×二级主体（场景内占比）</h3>
   <p class="muted cross-method-note" style="font-size:12px;line-height:1.7;border-left:3px solid var(--gray-b);padding:8px 12px;margin:0 0 14px;background:var(--gray-l)"><strong>口径说明</strong>：先去掉全局占比&lt;1% 且排除「未确定」的二级场景；在剩余场景上对需求占比（%）取<strong>中位数</strong>，仅将占比<strong>高于</strong>该中位数的场景纳入下图交叉分析。本渠道剩余场景占比的<strong>中位数为 2.71%</strong>；下图共 <strong>10</strong> 个场景高于该中位数。</p>
-  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><strong>聚焦场景：</strong>本节聚焦占比领先的场景：「社交配图」16.4%；「商品详情页」15.9%；建议先梳理这些场景的主流程与主体组合，率先打磨高占比链路。</p><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 16.4%</span> 「社交配图」场景下，头部单类「生活人像(亲子/家庭/情侣)」占 <strong>35.4%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 15.9%</span> 「商品详情页」场景下，TOP1「模特/服装展示」占 <strong>16.9%</strong>。</li></ul></div>
-  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="cfd28334b19d45dda56d51c888a21830" class="chart-container" style="width:520px; height:340px; "></div>
+  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>内嵌端特征：</strong>内嵌设计室的头部场景是「社交配图」「商品详情页」和「Logo/图标提取」，但头部主体里的「卡通人物/插画」并不主要落在这些头部场景里，而是更多分散在「平面拼贴/合成」「UI素材」「海报设计」「表情包/贴纸」等设计素材类场景；与此同时，社交配图里又以「生活人像」和「模特/服装展示」为主。这说明内嵌设计室不是单一需求入口，而是两拨用户叠在一起：一拨在做社交传播和轻量商品展示，另一拨在做卡通插画、贴纸、UI元素等设计素材拆取与复用。这里说的“轻设计素材”，更多指拿现成元素快速抠出后继续做头像、贴纸、海报拼贴或社交内容，不是品牌视觉、商业物料那类更长链路的重设计生产。</p><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 16.4%</span> 「社交配图」场景下，头部单类「生活人像(亲子/家庭/情侣)」占 <strong>35.4%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 15.9%</span> 「商品详情页」场景下，TOP1「模特/服装展示」占 <strong>16.9%</strong>。</li></ul></div>
+  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="c7197e0906a04148aa805481d8b275ad" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_cfd28334b19d45dda56d51c888a21830 = echarts.init(
-            document.getElementById('cfd28334b19d45dda56d51c888a21830'), 'white', {renderer: 'canvas'});
-        var option_cfd28334b19d45dda56d51c888a21830 = {
+        var chart_c7197e0906a04148aa805481d8b275ad = echarts.init(
+            document.getElementById('c7197e0906a04148aa805481d8b275ad'), 'white', {renderer: 'canvas'});
+        var option_c7197e0906a04148aa805481d8b275ad = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -710,12 +747,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_cfd28334b19d45dda56d51c888a21830.setOption(option_cfd28334b19d45dda56d51c888a21830);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="45a55ede20a6412a816ec2188f39d920" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_c7197e0906a04148aa805481d8b275ad.setOption(option_c7197e0906a04148aa805481d8b275ad);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="286f1c44dfa14699951f8dcf0c7154b0" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_45a55ede20a6412a816ec2188f39d920 = echarts.init(
-            document.getElementById('45a55ede20a6412a816ec2188f39d920'), 'white', {renderer: 'canvas'});
-        var option_45a55ede20a6412a816ec2188f39d920 = {
+        var chart_286f1c44dfa14699951f8dcf0c7154b0 = echarts.init(
+            document.getElementById('286f1c44dfa14699951f8dcf0c7154b0'), 'white', {renderer: 'canvas'});
+        var option_286f1c44dfa14699951f8dcf0c7154b0 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -955,12 +992,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_45a55ede20a6412a816ec2188f39d920.setOption(option_45a55ede20a6412a816ec2188f39d920);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="6a967826a1a44bc4a943c33259bfe5f4" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_286f1c44dfa14699951f8dcf0c7154b0.setOption(option_286f1c44dfa14699951f8dcf0c7154b0);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="97da4135f384439a8338da84414a6a3b" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_6a967826a1a44bc4a943c33259bfe5f4 = echarts.init(
-            document.getElementById('6a967826a1a44bc4a943c33259bfe5f4'), 'white', {renderer: 'canvas'});
-        var option_6a967826a1a44bc4a943c33259bfe5f4 = {
+        var chart_97da4135f384439a8338da84414a6a3b = echarts.init(
+            document.getElementById('97da4135f384439a8338da84414a6a3b'), 'white', {renderer: 'canvas'});
+        var option_97da4135f384439a8338da84414a6a3b = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1198,12 +1235,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_6a967826a1a44bc4a943c33259bfe5f4.setOption(option_6a967826a1a44bc4a943c33259bfe5f4);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="7fb73793e3da48a08de9aa877b3d8894" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_97da4135f384439a8338da84414a6a3b.setOption(option_97da4135f384439a8338da84414a6a3b);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="0f6ca84d81c5437ca297bb5aaeee434e" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_7fb73793e3da48a08de9aa877b3d8894 = echarts.init(
-            document.getElementById('7fb73793e3da48a08de9aa877b3d8894'), 'white', {renderer: 'canvas'});
-        var option_7fb73793e3da48a08de9aa877b3d8894 = {
+        var chart_0f6ca84d81c5437ca297bb5aaeee434e = echarts.init(
+            document.getElementById('0f6ca84d81c5437ca297bb5aaeee434e'), 'white', {renderer: 'canvas'});
+        var option_0f6ca84d81c5437ca297bb5aaeee434e = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1443,12 +1480,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_7fb73793e3da48a08de9aa877b3d8894.setOption(option_7fb73793e3da48a08de9aa877b3d8894);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="baa3d41d6be34e6c92da04114696a3c0" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_0f6ca84d81c5437ca297bb5aaeee434e.setOption(option_0f6ca84d81c5437ca297bb5aaeee434e);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="6ea5a073fa4d46e2a124ddb3a7e914af" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_baa3d41d6be34e6c92da04114696a3c0 = echarts.init(
-            document.getElementById('baa3d41d6be34e6c92da04114696a3c0'), 'white', {renderer: 'canvas'});
-        var option_baa3d41d6be34e6c92da04114696a3c0 = {
+        var chart_6ea5a073fa4d46e2a124ddb3a7e914af = echarts.init(
+            document.getElementById('6ea5a073fa4d46e2a124ddb3a7e914af'), 'white', {renderer: 'canvas'});
+        var option_6ea5a073fa4d46e2a124ddb3a7e914af = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1688,12 +1725,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_baa3d41d6be34e6c92da04114696a3c0.setOption(option_baa3d41d6be34e6c92da04114696a3c0);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="15c817d5a4b4443a92544f69ea2d70ea" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_6ea5a073fa4d46e2a124ddb3a7e914af.setOption(option_6ea5a073fa4d46e2a124ddb3a7e914af);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="bb8c7a57e3fe49ecaa375f3b9f222879" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_15c817d5a4b4443a92544f69ea2d70ea = echarts.init(
-            document.getElementById('15c817d5a4b4443a92544f69ea2d70ea'), 'white', {renderer: 'canvas'});
-        var option_15c817d5a4b4443a92544f69ea2d70ea = {
+        var chart_bb8c7a57e3fe49ecaa375f3b9f222879 = echarts.init(
+            document.getElementById('bb8c7a57e3fe49ecaa375f3b9f222879'), 'white', {renderer: 'canvas'});
+        var option_bb8c7a57e3fe49ecaa375f3b9f222879 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1933,12 +1970,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_15c817d5a4b4443a92544f69ea2d70ea.setOption(option_15c817d5a4b4443a92544f69ea2d70ea);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="420ab5a4b6cc4dad8a937d0edaf8da73" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_bb8c7a57e3fe49ecaa375f3b9f222879.setOption(option_bb8c7a57e3fe49ecaa375f3b9f222879);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="55772d0342384b49a87ad40ba25af1af" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_420ab5a4b6cc4dad8a937d0edaf8da73 = echarts.init(
-            document.getElementById('420ab5a4b6cc4dad8a937d0edaf8da73'), 'white', {renderer: 'canvas'});
-        var option_420ab5a4b6cc4dad8a937d0edaf8da73 = {
+        var chart_55772d0342384b49a87ad40ba25af1af = echarts.init(
+            document.getElementById('55772d0342384b49a87ad40ba25af1af'), 'white', {renderer: 'canvas'});
+        var option_55772d0342384b49a87ad40ba25af1af = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -2178,12 +2215,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_420ab5a4b6cc4dad8a937d0edaf8da73.setOption(option_420ab5a4b6cc4dad8a937d0edaf8da73);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="0d04a174b6df4e2d96a6a5989df88dac" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_55772d0342384b49a87ad40ba25af1af.setOption(option_55772d0342384b49a87ad40ba25af1af);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="abcd99b3f03f44ad9205c20c3c530d81" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_0d04a174b6df4e2d96a6a5989df88dac = echarts.init(
-            document.getElementById('0d04a174b6df4e2d96a6a5989df88dac'), 'white', {renderer: 'canvas'});
-        var option_0d04a174b6df4e2d96a6a5989df88dac = {
+        var chart_abcd99b3f03f44ad9205c20c3c530d81 = echarts.init(
+            document.getElementById('abcd99b3f03f44ad9205c20c3c530d81'), 'white', {renderer: 'canvas'});
+        var option_abcd99b3f03f44ad9205c20c3c530d81 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -2423,12 +2460,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_0d04a174b6df4e2d96a6a5989df88dac.setOption(option_0d04a174b6df4e2d96a6a5989df88dac);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="ffdf94091dfd4c5f9d9e903a205efd02" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_abcd99b3f03f44ad9205c20c3c530d81.setOption(option_abcd99b3f03f44ad9205c20c3c530d81);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="1396bd856198481ab57cc248e5c6bdf0" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_ffdf94091dfd4c5f9d9e903a205efd02 = echarts.init(
-            document.getElementById('ffdf94091dfd4c5f9d9e903a205efd02'), 'white', {renderer: 'canvas'});
-        var option_ffdf94091dfd4c5f9d9e903a205efd02 = {
+        var chart_1396bd856198481ab57cc248e5c6bdf0 = echarts.init(
+            document.getElementById('1396bd856198481ab57cc248e5c6bdf0'), 'white', {renderer: 'canvas'});
+        var option_1396bd856198481ab57cc248e5c6bdf0 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -2668,12 +2705,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_ffdf94091dfd4c5f9d9e903a205efd02.setOption(option_ffdf94091dfd4c5f9d9e903a205efd02);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="d67217b92581461b81cd6f05066abe39" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_1396bd856198481ab57cc248e5c6bdf0.setOption(option_1396bd856198481ab57cc248e5c6bdf0);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="6cd0939173cf414a940f42398c96b4d3" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_d67217b92581461b81cd6f05066abe39 = echarts.init(
-            document.getElementById('d67217b92581461b81cd6f05066abe39'), 'white', {renderer: 'canvas'});
-        var option_d67217b92581461b81cd6f05066abe39 = {
+        var chart_6cd0939173cf414a940f42398c96b4d3 = echarts.init(
+            document.getElementById('6cd0939173cf414a940f42398c96b4d3'), 'white', {renderer: 'canvas'});
+        var option_6cd0939173cf414a940f42398c96b4d3 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -2913,24 +2950,24 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_d67217b92581461b81cd6f05066abe39.setOption(option_d67217b92581461b81cd6f05066abe39);
+        chart_6cd0939173cf414a940f42398c96b4d3.setOption(option_6cd0939173cf414a940f42398c96b4d3);
     </script></div></div></div></div>
 </section>
 
 
 <section class="section" id="ch-pc" style="scroll-margin-top:20px">
-  <h2>秀秀PC</h2>
+  <h3>II、秀秀PC</h3>
   <div class="hero" style="margin-bottom:20px;padding:20px 24px">
     <p class="sub">有效记录（含 scene_l2）：<strong>2,617</strong> · 全表行数：<strong>2,617</strong> · 不同二级场景数：<strong>45</strong></p>
     <p style="font-size:13px;color:var(--muted);margin-top:8px"><strong>主体口径</strong>：正文与对照表、交叉分析均为<strong>二级主体（subject_l2）</strong>；一级类目不在此展开。二级主体 TOP40 见文末<strong>附录</strong>（<a href="#appendix-l2-pc">秀秀PC</a>）。</p>
   </div>
   <h3>1. 二级场景占比</h3>
   <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0'>共 <strong>45</strong> 个二级场景，含 scene_l2 的有效记录合计 <strong>2,617</strong>。TOP1「商品详情页」<strong>17.0%</strong>，TOP3 合计 <strong>39.1%</strong>。</p><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>重点场景：</strong>「商品详情页」<strong>17.0%</strong>；「商品去底/白底图」<strong>12.3%</strong>；「电商主图」<strong>9.8%</strong>；覆盖约 <strong>39.1%</strong> 的有效需求。</p></div>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="5c23990a3b364ebc97e977718214f489" class="chart-container" style="width:1060px; height:990px; "></div>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="9a50e3f181e84529abbf56e9d6ff1b36" class="chart-container" style="width:1060px; height:990px; "></div>
     <script>
-        var chart_5c23990a3b364ebc97e977718214f489 = echarts.init(
-            document.getElementById('5c23990a3b364ebc97e977718214f489'), 'white', {renderer: 'canvas'});
-        var option_5c23990a3b364ebc97e977718214f489 = {
+        var chart_9a50e3f181e84529abbf56e9d6ff1b36 = echarts.init(
+            document.getElementById('9a50e3f181e84529abbf56e9d6ff1b36'), 'white', {renderer: 'canvas'});
+        var option_9a50e3f181e84529abbf56e9d6ff1b36 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -3217,16 +3254,17 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_5c23990a3b364ebc97e977718214f489.setOption(option_5c23990a3b364ebc97e977718214f489);
+        chart_9a50e3f181e84529abbf56e9d6ff1b36.setOption(option_9a50e3f181e84529abbf56e9d6ff1b36);
     </script></div></div>
+  <div class="card" style="margin:14px 0 0"><h4 style='margin:0 0 8px;font-size:15px;color:var(--sub)'>复杂度标签词云</h4><p style='color:var(--muted);font-size:13px;margin:0 0 10px'>按当前端原始 difficulty tags 词频统计，辅助理解这端常见的抠图难点。</p><div style='background:#fff;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:16px;text-align:center'><div style='font-size:13px;font-weight:700;color:#374151;margin-bottom:10px'>秀秀PC复杂度标签词云</div><span style="font-size:47px;color:#24477f;opacity:1.0;margin:5px 10px;display:inline-block;font-weight:700">简单边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(29.8%)</sub></span><span style="font-size:30px;color:#5a8bc9;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">反光/高光<sub style="font-size:10px;font-weight:400;opacity:.7">(14.3%)</sub></span><span style="font-size:29px;color:#0d6b2c;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">多主体<sub style="font-size:10px;font-weight:400;opacity:.7">(13.2%)</sub></span><span style="font-size:27px;color:#b85c00;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">复杂边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(11.9%)</sub></span><span style="font-size:26px;color:#5a4a7a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">主体有镂空<sub style="font-size:10px;font-weight:400;opacity:.7">(10.9%)</sub></span><span style="font-size:22px;color:#4a5568;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">发丝/毛发<sub style="font-size:10px;font-weight:400;opacity:.7">(7.3%)</sub></span><span style="font-size:22px;color:#1a3560;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">前背景色接近<sub style="font-size:10px;font-weight:400;opacity:.7">(7.2%)</sub></span><span style="font-size:19px;color:#c41e3a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">透明/玻璃质<sub style="font-size:10px;font-weight:400;opacity:.7">(4.0%)</sub></span><span style="font-size:16px;color:#0d6b4a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">半透明/纱质<sub style="font-size:10px;font-weight:400;opacity:.7">(1.3%)</sub></span></div><p style='font-size:13px;line-height:1.8;color:var(--sub);margin:10px 0 0'><strong>复杂度标签占比（>10%）：</strong>• 简单边缘（29.8%）<br/>• 反光/高光（14.3%）<br/>• 多主体（13.2%）<br/>• 复杂边缘（11.9%）<br/>• 主体有镂空（10.9%）；反光材质主体较多；多主体构图较常见。</p></div>
   <h3>2. 场景×二级主体（场景内占比）</h3>
   <p class="muted cross-method-note" style="font-size:12px;line-height:1.7;border-left:3px solid var(--gray-b);padding:8px 12px;margin:0 0 14px;background:var(--gray-l)"><strong>口径说明</strong>：先去掉全局占比&lt;1% 且排除「未确定」的二级场景；在剩余场景上对需求占比（%）取<strong>中位数</strong>，仅将占比<strong>高于</strong>该中位数的场景纳入下图交叉分析。本渠道剩余场景占比的<strong>中位数为 4.01%</strong>；下图共 <strong>8</strong> 个场景高于该中位数。</p>
-  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><strong>聚焦场景：</strong>本节聚焦占比领先的场景：「商品详情页」17.0%；「商品去底/白底图」12.3%；建议先梳理这些场景的主流程与主体组合，率先打磨高占比链路。</p><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 17.0%</span> 「商品详情页」场景下，TOP1「工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)」占 <strong>8.8%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 12.3%</span> 「商品去底/白底图」场景下，TOP1「工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)」占 <strong>10.2%</strong>。</li></ul></div>
-  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="2027df33bb09462d8b9ba3ae613ecf6e" class="chart-container" style="width:520px; height:340px; "></div>
+  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>PC 端特征：</strong>PC 端工业零件/工具类主体占比较高，说明 PC 更常承接结构复杂、精度要求高、偏标准化生产流程的商品素材处理需求。这类主体常见硬边、金属反光、孔洞、镂空和细杆件，用户对“抠得准、处理稳”更敏感；背后往往连接白底化、统一背景、排版和批量出图等后续流程，说明这部分需求更接近商家、工厂、经销商、运营或设计岗位的商品素材生产链路。</p><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 17.0%</span> 「商品详情页」场景下，TOP1「工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)」占 <strong>8.8%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 12.3%</span> 「商品去底/白底图」场景下，TOP1「工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)」占 <strong>10.2%</strong>。</li></ul></div>
+  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="95f3c9a55bd44d03a1ffc3de6cb8eebd" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_2027df33bb09462d8b9ba3ae613ecf6e = echarts.init(
-            document.getElementById('2027df33bb09462d8b9ba3ae613ecf6e'), 'white', {renderer: 'canvas'});
-        var option_2027df33bb09462d8b9ba3ae613ecf6e = {
+        var chart_95f3c9a55bd44d03a1ffc3de6cb8eebd = echarts.init(
+            document.getElementById('95f3c9a55bd44d03a1ffc3de6cb8eebd'), 'white', {renderer: 'canvas'});
+        var option_95f3c9a55bd44d03a1ffc3de6cb8eebd = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -3466,12 +3504,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_2027df33bb09462d8b9ba3ae613ecf6e.setOption(option_2027df33bb09462d8b9ba3ae613ecf6e);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="b618b52a891e4ddba362ce6b90b67ba0" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_95f3c9a55bd44d03a1ffc3de6cb8eebd.setOption(option_95f3c9a55bd44d03a1ffc3de6cb8eebd);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="686f277c87534614b79c7091625c18bf" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_b618b52a891e4ddba362ce6b90b67ba0 = echarts.init(
-            document.getElementById('b618b52a891e4ddba362ce6b90b67ba0'), 'white', {renderer: 'canvas'});
-        var option_b618b52a891e4ddba362ce6b90b67ba0 = {
+        var chart_686f277c87534614b79c7091625c18bf = echarts.init(
+            document.getElementById('686f277c87534614b79c7091625c18bf'), 'white', {renderer: 'canvas'});
+        var option_686f277c87534614b79c7091625c18bf = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -3711,12 +3749,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_b618b52a891e4ddba362ce6b90b67ba0.setOption(option_b618b52a891e4ddba362ce6b90b67ba0);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="b1a1b03eb2934d0089d828cbdac3e445" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_686f277c87534614b79c7091625c18bf.setOption(option_686f277c87534614b79c7091625c18bf);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="b9d13cc6f3b144fab5e3ffc4bac2efa8" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_b1a1b03eb2934d0089d828cbdac3e445 = echarts.init(
-            document.getElementById('b1a1b03eb2934d0089d828cbdac3e445'), 'white', {renderer: 'canvas'});
-        var option_b1a1b03eb2934d0089d828cbdac3e445 = {
+        var chart_b9d13cc6f3b144fab5e3ffc4bac2efa8 = echarts.init(
+            document.getElementById('b9d13cc6f3b144fab5e3ffc4bac2efa8'), 'white', {renderer: 'canvas'});
+        var option_b9d13cc6f3b144fab5e3ffc4bac2efa8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -3956,12 +3994,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_b1a1b03eb2934d0089d828cbdac3e445.setOption(option_b1a1b03eb2934d0089d828cbdac3e445);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="395f08e172db4b9885b595435626dafa" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_b9d13cc6f3b144fab5e3ffc4bac2efa8.setOption(option_b9d13cc6f3b144fab5e3ffc4bac2efa8);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="7c3888745cb24e84b459dbd3774793d4" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_395f08e172db4b9885b595435626dafa = echarts.init(
-            document.getElementById('395f08e172db4b9885b595435626dafa'), 'white', {renderer: 'canvas'});
-        var option_395f08e172db4b9885b595435626dafa = {
+        var chart_7c3888745cb24e84b459dbd3774793d4 = echarts.init(
+            document.getElementById('7c3888745cb24e84b459dbd3774793d4'), 'white', {renderer: 'canvas'});
+        var option_7c3888745cb24e84b459dbd3774793d4 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -4201,12 +4239,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_395f08e172db4b9885b595435626dafa.setOption(option_395f08e172db4b9885b595435626dafa);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="c9e2895c6a12463ca2789a16ffbc9984" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_7c3888745cb24e84b459dbd3774793d4.setOption(option_7c3888745cb24e84b459dbd3774793d4);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="7e52b7f4b77c4f5ca7e573980faf9029" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_c9e2895c6a12463ca2789a16ffbc9984 = echarts.init(
-            document.getElementById('c9e2895c6a12463ca2789a16ffbc9984'), 'white', {renderer: 'canvas'});
-        var option_c9e2895c6a12463ca2789a16ffbc9984 = {
+        var chart_7e52b7f4b77c4f5ca7e573980faf9029 = echarts.init(
+            document.getElementById('7e52b7f4b77c4f5ca7e573980faf9029'), 'white', {renderer: 'canvas'});
+        var option_7e52b7f4b77c4f5ca7e573980faf9029 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -4446,12 +4484,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_c9e2895c6a12463ca2789a16ffbc9984.setOption(option_c9e2895c6a12463ca2789a16ffbc9984);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="56b0d74419b44ea393f8581fdb1cccca" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_7e52b7f4b77c4f5ca7e573980faf9029.setOption(option_7e52b7f4b77c4f5ca7e573980faf9029);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="f47093b8465743458ddf1e5d2a40e543" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_56b0d74419b44ea393f8581fdb1cccca = echarts.init(
-            document.getElementById('56b0d74419b44ea393f8581fdb1cccca'), 'white', {renderer: 'canvas'});
-        var option_56b0d74419b44ea393f8581fdb1cccca = {
+        var chart_f47093b8465743458ddf1e5d2a40e543 = echarts.init(
+            document.getElementById('f47093b8465743458ddf1e5d2a40e543'), 'white', {renderer: 'canvas'});
+        var option_f47093b8465743458ddf1e5d2a40e543 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -4689,12 +4727,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_56b0d74419b44ea393f8581fdb1cccca.setOption(option_56b0d74419b44ea393f8581fdb1cccca);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="b3b6bfa3cc774c71a8f95e51a7a8e3a6" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_f47093b8465743458ddf1e5d2a40e543.setOption(option_f47093b8465743458ddf1e5d2a40e543);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="bb18a6de79944630b047aa238c81e6e8" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_b3b6bfa3cc774c71a8f95e51a7a8e3a6 = echarts.init(
-            document.getElementById('b3b6bfa3cc774c71a8f95e51a7a8e3a6'), 'white', {renderer: 'canvas'});
-        var option_b3b6bfa3cc774c71a8f95e51a7a8e3a6 = {
+        var chart_bb18a6de79944630b047aa238c81e6e8 = echarts.init(
+            document.getElementById('bb18a6de79944630b047aa238c81e6e8'), 'white', {renderer: 'canvas'});
+        var option_bb18a6de79944630b047aa238c81e6e8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -4934,12 +4972,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_b3b6bfa3cc774c71a8f95e51a7a8e3a6.setOption(option_b3b6bfa3cc774c71a8f95e51a7a8e3a6);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="10c36269bd964f03993695a46377f647" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_bb18a6de79944630b047aa238c81e6e8.setOption(option_bb18a6de79944630b047aa238c81e6e8);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="6a819519a0ce46a48a0f3cdbc58297d8" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_10c36269bd964f03993695a46377f647 = echarts.init(
-            document.getElementById('10c36269bd964f03993695a46377f647'), 'white', {renderer: 'canvas'});
-        var option_10c36269bd964f03993695a46377f647 = {
+        var chart_6a819519a0ce46a48a0f3cdbc58297d8 = echarts.init(
+            document.getElementById('6a819519a0ce46a48a0f3cdbc58297d8'), 'white', {renderer: 'canvas'});
+        var option_6a819519a0ce46a48a0f3cdbc58297d8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -5179,24 +5217,24 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_10c36269bd964f03993695a46377f647.setOption(option_10c36269bd964f03993695a46377f647);
+        chart_6a819519a0ce46a48a0f3cdbc58297d8.setOption(option_6a819519a0ce46a48a0f3cdbc58297d8);
     </script></div></div></div></div>
 </section>
 
 
 <section class="section" id="ch-app" style="scroll-margin-top:20px">
-  <h2>设计室APP</h2>
+  <h3>III、设计室APP</h3>
   <div class="hero" style="margin-bottom:20px;padding:20px 24px">
     <p class="sub">有效记录（含 scene_l2）：<strong>3,525</strong> · 全表行数：<strong>3,546</strong> · 不同二级场景数：<strong>41</strong></p>
     <p style="font-size:13px;color:var(--muted);margin-top:8px"><strong>主体口径</strong>：正文与对照表、交叉分析均为<strong>二级主体（subject_l2）</strong>；一级类目不在此展开。二级主体 TOP40 见文末<strong>附录</strong>（<a href="#appendix-l2-app">设计室APP</a>）。</p>
   </div>
   <h3>1. 二级场景占比</h3>
   <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0'>共 <strong>41</strong> 个二级场景，含 scene_l2 的有效记录合计 <strong>3,525</strong>。TOP1「商品详情页」<strong>43.5%</strong>，TOP3 合计 <strong>66.6%</strong>。</p><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>重点场景：</strong>「商品详情页」<strong>43.5%</strong>；「社交配图」<strong>13.2%</strong>；「电商主图」<strong>10.0%</strong>；覆盖约 <strong>66.6%</strong> 的有效需求。</p></div>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="7c274460e2f9450d860cd6ab10e2d610" class="chart-container" style="width:1060px; height:902px; "></div>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="ec06b0abad3b4686932938a14fcc9860" class="chart-container" style="width:1060px; height:902px; "></div>
     <script>
-        var chart_7c274460e2f9450d860cd6ab10e2d610 = echarts.init(
-            document.getElementById('7c274460e2f9450d860cd6ab10e2d610'), 'white', {renderer: 'canvas'});
-        var option_7c274460e2f9450d860cd6ab10e2d610 = {
+        var chart_ec06b0abad3b4686932938a14fcc9860 = echarts.init(
+            document.getElementById('ec06b0abad3b4686932938a14fcc9860'), 'white', {renderer: 'canvas'});
+        var option_ec06b0abad3b4686932938a14fcc9860 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -5475,16 +5513,17 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_7c274460e2f9450d860cd6ab10e2d610.setOption(option_7c274460e2f9450d860cd6ab10e2d610);
+        chart_ec06b0abad3b4686932938a14fcc9860.setOption(option_ec06b0abad3b4686932938a14fcc9860);
     </script></div></div>
+  <div class="card" style="margin:14px 0 0"><h4 style='margin:0 0 8px;font-size:15px;color:var(--sub)'>复杂度标签词云</h4><p style='color:var(--muted);font-size:13px;margin:0 0 10px'>按当前端原始 difficulty tags 词频统计，辅助理解这端常见的抠图难点。</p><div style='background:#fff;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:16px;text-align:center'><div style='font-size:13px;font-weight:700;color:#374151;margin-bottom:10px'>设计室APP复杂度标签词云</div><span style="font-size:47px;color:#24477f;opacity:1.0;margin:5px 10px;display:inline-block;font-weight:700">简单边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(21.8%)</sub></span><span style="font-size:37px;color:#5a8bc9;opacity:0.714572864321608;margin:5px 10px;display:inline-block;font-weight:700">复杂边缘<sub style="font-size:10px;font-weight:400;opacity:.7">(15.6%)</sub></span><span style="font-size:34px;color:#0d6b2c;opacity:0.606532663316583;margin:5px 10px;display:inline-block;font-weight:700">发丝/毛发<sub style="font-size:10px;font-weight:400;opacity:.7">(13.2%)</sub></span><span style="font-size:33px;color:#b85c00;opacity:0.578894472361809;margin:5px 10px;display:inline-block;font-weight:700">多主体<sub style="font-size:10px;font-weight:400;opacity:.7">(12.6%)</sub></span><span style="font-size:31px;color:#5a4a7a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">反光/高光<sub style="font-size:10px;font-weight:400;opacity:.7">(11.5%)</sub></span><span style="font-size:30px;color:#4a5568;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">前背景色接近<sub style="font-size:10px;font-weight:400;opacity:.7">(10.5%)</sub></span><span style="font-size:27px;color:#1a3560;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">主体有镂空<sub style="font-size:10px;font-weight:400;opacity:.7">(8.8%)</sub></span><span style="font-size:20px;color:#c41e3a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">半透明/纱质<sub style="font-size:10px;font-weight:400;opacity:.7">(3.7%)</sub></span><span style="font-size:18px;color:#0d6b4a;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">透明/玻璃质<sub style="font-size:10px;font-weight:400;opacity:.7">(2.4%)</sub></span><span style="font-size:15px;color:#24477f;opacity:0.55;margin:5px 10px;display:inline-block;font-weight:700">单主体<sub style="font-size:10px;font-weight:400;opacity:.7">(0.0%)</sub></span></div><p style='font-size:13px;line-height:1.8;color:var(--sub);margin:10px 0 0'><strong>复杂度标签占比（>10%）：</strong>• 简单边缘（21.8%）<br/>• 复杂边缘（15.6%）<br/>• 发丝/毛发（13.2%）<br/>• 多主体（12.6%）<br/>• 反光/高光（11.5%）<br/>• 前背景色接近（10.5%）；细碎边缘和人像轮廓处理较多；不规则边缘主体较多。</p></div>
   <h3>2. 场景×二级主体（场景内占比）</h3>
   <p class="muted cross-method-note" style="font-size:12px;line-height:1.7;border-left:3px solid var(--gray-b);padding:8px 12px;margin:0 0 14px;background:var(--gray-l)"><strong>口径说明</strong>：先去掉全局占比&lt;1% 且排除「未确定」的二级场景；在剩余场景上对需求占比（%）取<strong>中位数</strong>，仅将占比<strong>高于</strong>该中位数的场景纳入下图交叉分析。本渠道剩余场景占比的<strong>中位数为 2.31%</strong>；下图共 <strong>6</strong> 个场景高于该中位数。</p>
-  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><strong>聚焦场景：</strong>本节聚焦占比领先的场景：「商品详情页」43.5%；「社交配图」13.2%；建议先梳理这些场景的主流程与主体组合，率先打磨高占比链路。</p><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 43.5%</span> 「商品详情页」场景下，TOP1「模特/服装展示」占 <strong>29.6%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 13.2%</span> 「社交配图」场景下，头部单类「模特/服装展示」占 <strong>41.8%</strong>。</li></ul></div>
-  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="d32029e812c146d2a57d6bea418fde67" class="chart-container" style="width:520px; height:340px; "></div>
+  <div class="conclusion" style="margin:12px 0"><div class="ttl">结论</div><p style='font-size:14px;line-height:1.85;margin:0;padding-left:1.2em;text-indent:-1.2em'><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><strong>APP 端特征：</strong>设计室 APP 一级「电商」占比约 69.2%。社交配图中的「模特/服装展示」「儿童/婴儿人像」混入不少电商图，按 <strong>40%</strong> 估算对整体再贡献约 5.2%，整体估计 APP 电商相关需求约 74.4%。同时，商品图主体以「模特/服装展示」和「上装」为主；从样本图看，社交配图里的头部主体也多为电商模特图、童装展示图、对镜自拍、户外穿搭图，以及淘宝/社交平台截图。这说明 APP 用户基本以电商 / 商品推广用户为主，更像服饰/童装类的轻量经营者或社交渠道运营者，目标不是沉淀标准商品素材，而是把现成展示图、平台截图和半成品素材快速加工成可再次分发的推广图。</p><p style='font-size:14px;line-height:1.85;margin:8px 0 0;padding-left:1.2em;text-indent:-1.2em'><ul style='margin:10px 0 0;padding-left:1.2em;line-height:1.85;font-size:14px'><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 43.5%</span> 「商品详情页」场景下，TOP1「模特/服装展示」占 <strong>29.6%</strong>。</li><li style='margin:6px 0'><span class='muted' style='font-size:12px'>占比 13.2%</span> 「社交配图」场景下，头部单类「模特/服装展示」占 <strong>41.8%</strong>。</li></ul></div>
+  <div class="chart-scroll-x cross-analysis-charts"><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="343b031eb155421a8fec47c96b3f17c7" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_d32029e812c146d2a57d6bea418fde67 = echarts.init(
-            document.getElementById('d32029e812c146d2a57d6bea418fde67'), 'white', {renderer: 'canvas'});
-        var option_d32029e812c146d2a57d6bea418fde67 = {
+        var chart_343b031eb155421a8fec47c96b3f17c7 = echarts.init(
+            document.getElementById('343b031eb155421a8fec47c96b3f17c7'), 'white', {renderer: 'canvas'});
+        var option_343b031eb155421a8fec47c96b3f17c7 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -5724,12 +5763,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_d32029e812c146d2a57d6bea418fde67.setOption(option_d32029e812c146d2a57d6bea418fde67);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="22f6e729daae4ae08e7680a583de0443" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_343b031eb155421a8fec47c96b3f17c7.setOption(option_343b031eb155421a8fec47c96b3f17c7);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="8d679cca4c484d309f259210a7d2298e" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_22f6e729daae4ae08e7680a583de0443 = echarts.init(
-            document.getElementById('22f6e729daae4ae08e7680a583de0443'), 'white', {renderer: 'canvas'});
-        var option_22f6e729daae4ae08e7680a583de0443 = {
+        var chart_8d679cca4c484d309f259210a7d2298e = echarts.init(
+            document.getElementById('8d679cca4c484d309f259210a7d2298e'), 'white', {renderer: 'canvas'});
+        var option_8d679cca4c484d309f259210a7d2298e = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -5969,12 +6008,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_22f6e729daae4ae08e7680a583de0443.setOption(option_22f6e729daae4ae08e7680a583de0443);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="11cf6ef5b5dd40738c657209fc679dff" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_8d679cca4c484d309f259210a7d2298e.setOption(option_8d679cca4c484d309f259210a7d2298e);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="d604111398cb4e90bd28d04f4df870ee" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_11cf6ef5b5dd40738c657209fc679dff = echarts.init(
-            document.getElementById('11cf6ef5b5dd40738c657209fc679dff'), 'white', {renderer: 'canvas'});
-        var option_11cf6ef5b5dd40738c657209fc679dff = {
+        var chart_d604111398cb4e90bd28d04f4df870ee = echarts.init(
+            document.getElementById('d604111398cb4e90bd28d04f4df870ee'), 'white', {renderer: 'canvas'});
+        var option_d604111398cb4e90bd28d04f4df870ee = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -6214,12 +6253,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_11cf6ef5b5dd40738c657209fc679dff.setOption(option_11cf6ef5b5dd40738c657209fc679dff);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="bed57f49bcaf48f3b72079d8ffd02c31" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_d604111398cb4e90bd28d04f4df870ee.setOption(option_d604111398cb4e90bd28d04f4df870ee);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="a437bc488f744d0684a10e5f828ddc70" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_bed57f49bcaf48f3b72079d8ffd02c31 = echarts.init(
-            document.getElementById('bed57f49bcaf48f3b72079d8ffd02c31'), 'white', {renderer: 'canvas'});
-        var option_bed57f49bcaf48f3b72079d8ffd02c31 = {
+        var chart_a437bc488f744d0684a10e5f828ddc70 = echarts.init(
+            document.getElementById('a437bc488f744d0684a10e5f828ddc70'), 'white', {renderer: 'canvas'});
+        var option_a437bc488f744d0684a10e5f828ddc70 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -6459,12 +6498,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_bed57f49bcaf48f3b72079d8ffd02c31.setOption(option_bed57f49bcaf48f3b72079d8ffd02c31);
-    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="496278010ef9495b89b47f8c527cbf78" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_a437bc488f744d0684a10e5f828ddc70.setOption(option_a437bc488f744d0684a10e5f828ddc70);
+    </script></div></div></div><div class="grid-2"><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="89914423cc0c4b20be95e01ba33a01fa" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_496278010ef9495b89b47f8c527cbf78 = echarts.init(
-            document.getElementById('496278010ef9495b89b47f8c527cbf78'), 'white', {renderer: 'canvas'});
-        var option_496278010ef9495b89b47f8c527cbf78 = {
+        var chart_89914423cc0c4b20be95e01ba33a01fa = echarts.init(
+            document.getElementById('89914423cc0c4b20be95e01ba33a01fa'), 'white', {renderer: 'canvas'});
+        var option_89914423cc0c4b20be95e01ba33a01fa = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -6704,12 +6743,12 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_496278010ef9495b89b47f8c527cbf78.setOption(option_496278010ef9495b89b47f8c527cbf78);
-    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="4e932056a49c457b896f91c006369953" class="chart-container" style="width:520px; height:340px; "></div>
+        chart_89914423cc0c4b20be95e01ba33a01fa.setOption(option_89914423cc0c4b20be95e01ba33a01fa);
+    </script></div></div><div class="cross-scene-unit" style="margin-bottom:8px"><div class="chart-wrap"><div id="508e35dca1f940e1b81b49475b5df796" class="chart-container" style="width:520px; height:340px; "></div>
     <script>
-        var chart_4e932056a49c457b896f91c006369953 = echarts.init(
-            document.getElementById('4e932056a49c457b896f91c006369953'), 'white', {renderer: 'canvas'});
-        var option_4e932056a49c457b896f91c006369953 = {
+        var chart_508e35dca1f940e1b81b49475b5df796 = echarts.init(
+            document.getElementById('508e35dca1f940e1b81b49475b5df796'), 'white', {renderer: 'canvas'});
+        var option_508e35dca1f940e1b81b49475b5df796 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -6949,22 +6988,21 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_4e932056a49c457b896f91c006369953.setOption(option_4e932056a49c457b896f91c006369953);
+        chart_508e35dca1f940e1b81b49475b5df796.setOption(option_508e35dca1f940e1b81b49475b5df796);
     </script></div></div></div></div>
 </section>
 
-
-<div class="section" id="sec-appendix-l2" style="scroll-margin-top:20px">
-  <h2>附录：各端二级主体需求占比（TOP40）</h2>
-  <p style="color:var(--muted);font-size:14px;margin-bottom:16px">按渠道分列（含 Web），与正文场景及二级主体分析并列对照。</p>
-  
+  </div>
+  <div class="section" id="sec-appendix-l2shares" style="scroll-margin-top:20px">
+    <h3>二、各端二级主体占比</h3>
+    
 <div class="card" style="margin-bottom:24px" id="appendix-l2-neiqian">
-  <h3 style="margin-top:0">内嵌设计室</h3>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="a5c139514d7d48fa855f3a4a1502e6e7" class="chart-container" style="width:1060px; height:880px; "></div>
+  <h4 style="margin-top:0">内嵌设计室</h4>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="59395c3b888543a783dc5e41b26fc5a6" class="chart-container" style="width:1060px; height:880px; "></div>
     <script>
-        var chart_a5c139514d7d48fa855f3a4a1502e6e7 = echarts.init(
-            document.getElementById('a5c139514d7d48fa855f3a4a1502e6e7'), 'white', {renderer: 'canvas'});
-        var option_a5c139514d7d48fa855f3a4a1502e6e7 = {
+        var chart_59395c3b888543a783dc5e41b26fc5a6 = echarts.init(
+            document.getElementById('59395c3b888543a783dc5e41b26fc5a6'), 'white', {renderer: 'canvas'});
+        var option_59395c3b888543a783dc5e41b26fc5a6 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -7264,18 +7302,18 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_a5c139514d7d48fa855f3a4a1502e6e7.setOption(option_a5c139514d7d48fa855f3a4a1502e6e7);
+        chart_59395c3b888543a783dc5e41b26fc5a6.setOption(option_59395c3b888543a783dc5e41b26fc5a6);
     </script></div></div>
 </div>
 
 
 <div class="card" style="margin-bottom:24px" id="appendix-l2-pc">
-  <h3 style="margin-top:0">秀秀PC</h3>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="f47540954885494fbdaa1a46bef84b4d" class="chart-container" style="width:1060px; height:880px; "></div>
+  <h4 style="margin-top:0">秀秀PC</h4>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="3be2a9b94ce342f1914740e2b39c71b5" class="chart-container" style="width:1060px; height:880px; "></div>
     <script>
-        var chart_f47540954885494fbdaa1a46bef84b4d = echarts.init(
-            document.getElementById('f47540954885494fbdaa1a46bef84b4d'), 'white', {renderer: 'canvas'});
-        var option_f47540954885494fbdaa1a46bef84b4d = {
+        var chart_3be2a9b94ce342f1914740e2b39c71b5 = echarts.init(
+            document.getElementById('3be2a9b94ce342f1914740e2b39c71b5'), 'white', {renderer: 'canvas'});
+        var option_3be2a9b94ce342f1914740e2b39c71b5 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -7575,18 +7613,18 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_f47540954885494fbdaa1a46bef84b4d.setOption(option_f47540954885494fbdaa1a46bef84b4d);
+        chart_3be2a9b94ce342f1914740e2b39c71b5.setOption(option_3be2a9b94ce342f1914740e2b39c71b5);
     </script></div></div>
 </div>
 
 
 <div class="card" style="margin-bottom:24px" id="appendix-l2-app">
-  <h3 style="margin-top:0">设计室APP</h3>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="9c49eb3ccad348e9bba565a4b61838da" class="chart-container" style="width:1060px; height:880px; "></div>
+  <h4 style="margin-top:0">设计室APP</h4>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="9888f52e6609452c9c1cc4bc427670a8" class="chart-container" style="width:1060px; height:880px; "></div>
     <script>
-        var chart_9c49eb3ccad348e9bba565a4b61838da = echarts.init(
-            document.getElementById('9c49eb3ccad348e9bba565a4b61838da'), 'white', {renderer: 'canvas'});
-        var option_9c49eb3ccad348e9bba565a4b61838da = {
+        var chart_9888f52e6609452c9c1cc4bc427670a8 = echarts.init(
+            document.getElementById('9888f52e6609452c9c1cc4bc427670a8'), 'white', {renderer: 'canvas'});
+        var option_9888f52e6609452c9c1cc4bc427670a8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -7886,18 +7924,18 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_9c49eb3ccad348e9bba565a4b61838da.setOption(option_9c49eb3ccad348e9bba565a4b61838da);
+        chart_9888f52e6609452c9c1cc4bc427670a8.setOption(option_9888f52e6609452c9c1cc4bc427670a8);
     </script></div></div>
 </div>
 
 
 <div class="card" style="margin-bottom:24px" id="appendix-l2-web">
-  <h3 style="margin-top:0">Web</h3>
-  <div class="chart-scroll-x"><div class="chart-wrap"><div id="2a19b747029f46658638aca54177d989" class="chart-container" style="width:1060px; height:880px; "></div>
+  <h4 style="margin-top:0">Web</h4>
+  <div class="chart-scroll-x"><div class="chart-wrap"><div id="f64faa9b50d841348dbeab6ead8f9808" class="chart-container" style="width:1060px; height:880px; "></div>
     <script>
-        var chart_2a19b747029f46658638aca54177d989 = echarts.init(
-            document.getElementById('2a19b747029f46658638aca54177d989'), 'white', {renderer: 'canvas'});
-        var option_2a19b747029f46658638aca54177d989 = {
+        var chart_f64faa9b50d841348dbeab6ead8f9808 = echarts.init(
+            document.getElementById('f64faa9b50d841348dbeab6ead8f9808'), 'white', {renderer: 'canvas'});
+        var option_f64faa9b50d841348dbeab6ead8f9808 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -8197,14 +8235,21 @@ details summary:hover{color:#1a3560}
         }
     ]
 };
-        chart_2a19b747029f46658638aca54177d989.setOption(option_2a19b747029f46658638aca54177d989);
+        chart_f64faa9b50d841348dbeab6ead8f9808.setOption(option_f64faa9b50d841348dbeab6ead8f9808);
     </script></div></div>
 </div>
 
+  </div>
+  <div class="section" id="sec-appendix-labels" style="scroll-margin-top:20px">
+    <h3>三、标签体系</h3>
+    <p style="color:var(--muted);font-size:14px;line-height:1.9;margin:0 0 12px">这一节继续用二级场景、二级主体与 difficulty tags 描述用户需求，以下为标签维度的补充说明。</p>
+    <h4 style="margin:20px 0 6px">标签体系</h4>
+    <div style='display:flex;flex-direction:column;gap:12px'><h4 style='margin:10px 0 6px'>场景分类</h4><ul style='padding-left:18px;margin:0'><li style='margin-bottom:10px'><div><strong>电商</strong>：用于电商平台的商品展示和销售场景。当图片为白底/纯色底产品图且无其他明确用途线索时，默认归此类。</div><div class='muted' style='font-size:12px'>子类：电商主图、商品详情页、电商海报/活动页、商品去底/白底图、直播带货素材</div></li><li style='margin-bottom:10px'><div><strong>证件/身份</strong>：用于正式身份验证、证件办理等刚需场景</div><div class='muted' style='font-size:12px'>子类：证件照、身份认证、入学登记</div></li><li style='margin-bottom:10px'><div><strong>头像/社交</strong>：用于社交平台展示、个人形象或社交内容制作</div><div class='muted' style='font-size:12px'>子类：社交头像、企业/职场头像、社交配图、表情包/贴纸、视频封面/缩略图</div></li><li style='margin-bottom:10px'><div><strong>设计/创意</strong>：用于专业或半专业的视觉设计输出</div><div class='muted' style='font-size:12px'>子类：海报设计、品牌物料、Logo/图标提取、书籍封面、印花/图案设计、UI素材、平面拼贴/合成、广告横幅、婚纱写真设计、贺卡设计</div></li><li style='margin-bottom:10px'><div><strong>办公/商务</strong>：用于办公文档、企业宣传、内部培训等商务场景。不含餐饮相关内容。</div><div class='muted' style='font-size:12px'>子类：PPT演示、文档配图、企业宣传、产品教程、仓储盘点、方案演示</div></li><li style='margin-bottom:10px'><div><strong>餐饮</strong>：用于餐饮行业的菜单、店内展示、餐饮营销等场景。当图片主体为菜品/食物且使用场景与餐饮经营相关时归此类。</div><div class='muted' style='font-size:12px'>子类：菜单/菜品展示、店内物料/指引、餐饮海报/营销</div></li><li style='margin-bottom:10px'><div><strong>教育</strong>：用于教学、科普、校园等教育相关场景</div><div class='muted' style='font-size:12px'>子类：教育课件/教程、儿童绘本、科普宣导、校园宣传、毕业纪念、题库录入</div></li><li style='margin-bottom:10px'><div><strong>未确定</strong>：仅当图片无法判断使用场景时使用。严格限制使用: 白底/纯色底产品图默认归电商，菜品图默认归餐饮，设计元素默认归设计/创意。仅纯截图、测试图或完全无法推断用途时才归此类。</div><div class='muted' style='font-size:12px'>子类：未确定</div></li></ul><h4 style='margin:10px 0 6px'>主体分类</h4><ul style='padding-left:18px;margin:0'><li style='margin-bottom:10px'><div><strong>服装</strong>：各类衣物服饰</div><div class='muted' style='font-size:12px'>子类：上装(T恤/衬衫/卫衣/外套/马甲)、下装(裤子/裙子/短裤)、套装/连衣裙、内衣/塑身衣、运动服/骑行服、制服/工装、童装</div></li><li style='margin-bottom:10px'><div><strong>鞋包配饰</strong>：鞋靴、箱包、帽子、首饰等穿戴配件</div><div class='muted' style='font-size:12px'>子类：鞋靴(运动鞋/拖鞋/靴子等)、箱包(双肩包/手提包/行李箱等)、帽子(棒球帽/渔夫帽/针织帽等)、首饰(项链/戒指/耳环/手链等)、发饰/头饰、围巾/表带/其他配件</div></li><li style='margin-bottom:10px'><div><strong>美妆个护</strong>：护肤品、彩妆、美容工具等个人护理用品</div><div class='muted' style='font-size:12px'>子类：护肤品(瓶装/管装/防晒乳)、彩妆产品(化妆刷/假睫毛/美甲)、美容仪器、洗护用品(梳子/牙刷/香水)</div></li><li style='margin-bottom:10px'><div><strong>食品饮品</strong>：食物、饮料、食材等。判断依据: 画面主体是食物本身归此类，主体是盛放食物的器具归厨具餐具。</div><div class='muted' style='font-size:12px'>子类：中式菜品、西式食品/快餐、烘焙甜品、饮品/酒水、零食/干货、生鲜/水果、滋补/药材/茶叶</div></li><li style='margin-bottom:10px'><div><strong>家居家具</strong>：家具、灯具、纺织品、装饰品等家居大件和装饰</div><div class='muted' style='font-size:12px'>子类：家具(沙发/椅子/桌子/床垫/柜子)、灯具(台灯/吊灯/射灯)、家纺(抱枕/被子/地毯/窗帘)、装饰品(花瓶/相框/摆件/装饰画)、家用电器(电视/风扇/风扇扇叶)</div></li><li style='margin-bottom:10px'><div><strong>清洁收纳</strong>：清洁工具、收纳用品和家庭日用消耗品</div><div class='muted' style='font-size:12px'>子类：清洁工具(拖把/扫帚/抹布/清洁刷)、收纳用品(收纳盒/收纳架/收纳袋/挂钩)、家庭日耗品(抽纸/纸巾/洗衣皂/清洁剂)</div></li><li style='margin-bottom:10px'><div><strong>厨具餐具</strong>：厨房用具、餐饮器具。玻璃杯/茶壶/高脚碗/汤勺/滤网/筛子统一归此类，不归食品饮品。</div><div class='muted' style='font-size:12px'>子类：锅具(炒锅/炖锅/烤盘)、杯碗盘(玻璃杯/高脚碗/甜品盘)、刀具/厨房工具(水果刀/削皮刀/磨刀石/滤网/筛子/沥水架)、茶具(茶壶/玻璃茶具)、厨房小家电(食品加工机/蒸笼)、餐盒/便当盒</div></li><li style='margin-bottom:10px'><div><strong>数码3C</strong>：手机、电脑、电子设备及配件</div><div class='muted' style='font-size:12px'>子类：手机及配件(手机/手机壳/支架/挂绳)、电脑及配件(服务器/电路板/USB集线器)、音频设备(耳机/音箱)、相机/摄影器材、智能设备(智能眼镜/监控摄像头)、线材/充电器/电池、其他电子(遥控器/电子控制器)</div></li><li style='margin-bottom:10px'><div><strong>人像</strong>：以人物为抠图主体</div><div class='muted' style='font-size:12px'>子类：商务/职场人像、生活人像(亲子/家庭/情侣)、模特/服装展示、证件照人像、群像/合影、运动员/健身人像、儿童/婴儿人像</div></li><li style='margin-bottom:10px'><div><strong>交通工具</strong>：各类交通运输工具及零配件。行车记录仪统一归此类，不归数码3C。</div><div class='muted' style='font-size:12px'>子类：汽车/SUV/轿车、摩托车/自行车、船舶/游船、车配件(刹车卡钳/扰流板/行车记录仪/减震器等)</div></li><li style='margin-bottom:10px'><div><strong>办公文教</strong>：办公用品、文具、书籍教材。笔记本(纸质)归此类，笔记本电脑归数码3C。流程图/课件截图等非实物办公内容也归此类。</div><div class='muted' style='font-size:12px'>子类：文具(笔/笔记本/卡套)、办公设备(打印机/办公椅/屏幕)、书籍/教材/试卷/流程图、文创产品</div></li><li style='margin-bottom:10px'><div><strong>包装</strong>：各类包装容器和包装材料。判断依据: 画面主体是外包装本身归此类，主体是包装内的商品则归对应商品大类。</div><div class='muted' style='font-size:12px'>子类：食品包装(包装袋/打包碗/酱料包装)、礼盒/茶礼盒、通用包装(纸箱/手提袋/包装盒/桶装容器)、药品/日化包装</div></li><li style='margin-bottom:10px'><div><strong>图标标识</strong>：Logo、公章、徽章、二维码、应用图标等标识类主体。公章统一归此类，不归办公文教。</div><div class='muted' style='font-size:12px'>子类：Logo/品牌标识、公章/印章、徽章/认证标识、二维码/条码、警示牌/标识牌、应用图标/UI图标</div></li><li style='margin-bottom:10px'><div><strong>宠物</strong>：宠物动物及宠物用品</div><div class='muted' style='font-size:12px'>子类：猫、狗、宠物用品(玩具/粮食)</div></li><li style='margin-bottom:10px'><div><strong>运动/户外</strong>：运动器材和户外用品</div><div class='muted' style='font-size:12px'>子类：运动护具/配件(护膝/拉伸带)、球类/水上运动器材、骑行/滑雪装备、钓鱼/露营装备</div></li><li style='margin-bottom:10px'><div><strong>生活用品</strong>：低频但可识别的实物品类兜底大类</div><div class='muted' style='font-size:12px'>子类：玩具/手办、节庆用品(派对道具/装饰/蜡烛)、医疗用品(药品/保健品/医疗器具)、园艺/植物(盆栽/花束/园艺工具)、工业零件/工具(配电箱/断路器/刀片/阀门/五金件等)、自然生物(昆虫/动植物标本等)、手工材料(编织线/串珠绳等)</div></li><li style='margin-bottom:10px'><div><strong>设计素材</strong>：非实物的设计元素，包括插画、字效、装饰图形、招聘海报等图文排版素材</div><div class='muted' style='font-size:12px'>子类：卡通人物/插画、装饰元素/边框、3D素材/数字、文字效果/字体设计/贴纸</div></li><li style='margin-bottom:10px'><div><strong>建筑/场景</strong>：建筑物或环境场景作为抠图主体。仅当建筑/场景本身是用户要抠出的主体时使用，如果建筑是背景、人物是主体，应归入人像。</div><div class='muted' style='font-size:12px'>子类：建筑物(酒店/民居/四合院)、室内空间(会议室/橱窗)、城市景观/天际线</div></li><li style='margin-bottom:10px'><div><strong>无法识别</strong>：仅用于图片严重模糊/损坏无法辨认主体、纯截图/纯文字/纯色块等非实物图、明显的测试图或无意义内容。如能识别出物品但无精确匹配，归入最接近的大类并填写suggested_label。</div><div class='muted' style='font-size:12px'>子类：无法识别</div></li></ul><h4 style='margin:10px 0 6px'>复杂度标签</h4><p style='margin:0;padding-left:18px;color:var(--muted);font-size:13px'>发丝/毛发、透明/玻璃质、半透明/纱质、反光/高光、复杂边缘、简单边缘、多主体、前背景色接近、主体有镂空</p><h4 style='margin:10px 0 6px'>字段规则</h4><table style='width:100%;border-collapse:collapse;font-size:13px'><thead><tr><th style='text-align:left;padding:4px 4px 2px'>字段</th><th style='text-align:left;padding:4px 4px 2px'>规则</th></tr></thead><tbody><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>scene_l1</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，单选，从scene_classification.categories中选择</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>scene_l2</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，单选，从对应大类的subcategories中选择</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>subject_l1</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，单选，从subject_classification.categories中选择</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>subject_l2</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，单选，从对应大类的subcategories中选择</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>difficulty_tags</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，判断主体抠图难度，多选(至少一个)，从difficulty_tags.tags中选择</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>confidence</td><td style='padding:4px;border-top:1px solid #f0f0f0'>必填，0-1之间，综合置信度</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>suggested_label</td><td style='padding:4px;border-top:1px solid #f0f0f0'>选填，当现有子类无精确匹配时填写建议标签名</td></tr><tr><td style='padding:4px;border-top:1px solid #f0f0f0'>notes</td><td style='padding:4px;border-top:1px solid #f0f0f0'>选填，对边界case的补充说明</td></tr></tbody></table></div>
+  </div>
 </div>
 
 </div>
-<p class="footer">由 generate_apppc_proportion_report.py 生成</p>
+<p class="footer">由 generate_apppc_user_portrait_report.py 生成</p>
 <script>
 document.querySelectorAll('.toc a').forEach(function(a){
   a.addEventListener('click',function(e){
